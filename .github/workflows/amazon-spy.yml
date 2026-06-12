@@ -25,9 +25,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: amazon-spy
-        run: |
-          pip install -r requirements.txt
-          playwright install chromium
+        run: pip install -r requirements.txt
 
       - name: Run scraper
         working-directory: amazon-spy
