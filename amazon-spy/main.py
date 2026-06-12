@@ -12,7 +12,8 @@ from pathlib import Path
 from categories import CATEGORIES
 from scraper import run_scraper
 from scorer import score_panama, estimate_monthly_sales
-from report import generate_html
+from report import generate_html, generate_email_html
+from send_email import send as send_email
 
 
 REPORTS_DIR = Path(__file__).parent / "reports"
@@ -82,6 +83,16 @@ async def main() -> None:
         encoding="utf-8",
     )
     print(f"✅ Datos JSON: {json_path}")
+
+    # 6 — Generate email-friendly HTML
+    email_body_path = REPORTS_DIR / f"{date_slug}-email.html"
+    email_html = generate_email_html(all_products, CATEGORIES, now)
+    email_body_path.write_text(email_html, encoding="utf-8")
+    print(f"✅ Email HTML: {email_body_path}")
+
+    # 7 — Send email (only runs if secrets are set)
+    send_email(report_path, email_body_path)
+
     print("\n🏁 Done.\n")
 
 
