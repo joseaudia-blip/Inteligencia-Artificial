@@ -24,9 +24,11 @@ def _product_card(p: dict, cat: dict) -> str:
     pcolor = _panama_color(score)
     sales = p.get("monthly_sales_est", 0)
     sales_fmt = f"{sales:,}"
-    revenue_est = sales * _price_num(p.get("price", "0"))
+    price_num = _price_num(p.get("price", "0"))
+    revenue_est = sales * price_num
     revenue_fmt = f"${revenue_est:,.0f}" if revenue_est else "—"
-    reviews_fmt = f"{p.get('reviews', 0):,}"
+    reviews = p.get("reviews", 0)
+    reviews_fmt = f"{reviews:,}"
     rating = p.get("rating", 0)
     stars = "★" * int(rating) + ("½" if rating % 1 >= 0.5 else "") if rating else "—"
     img = p.get("image", "")
@@ -34,6 +36,7 @@ def _product_card(p: dict, cat: dict) -> str:
     title = p.get("title", "Sin título")[:80]
     price = p.get("price") or "—"
     rank = p.get("rank", "—")
+    description = panama.get("description", "")
 
     return f"""
 <div class="product-card" data-category="{cat['id']}" data-score="{score}">
@@ -50,17 +53,29 @@ def _product_card(p: dict, cat: dict) -> str:
       <span class="meta-price">{price}</span>
       <span class="meta-rating">{stars} <small>({reviews_fmt} reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~{sales_fmt} uds/mes</span>
-      <span>💵 Revenue ~{revenue_fmt}/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~{sales_fmt} uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">{revenue_fmt}</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:{pcolor}">{panama['emoji']} {score}/100 — {panama['level']}</span>
       </div>
       {_score_bar(score, pcolor)}
-      <div class="panama-notes">{panama['notes']}</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">{description}</span>
+      </div>
     </div>
     <a class="view-btn" href="{url}" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -231,17 +246,27 @@ def generate_html(
   .card-meta {{ display: flex; flex-direction: column; gap: 3px; }}
   .meta-price {{ font-size: 1.05rem; font-weight: 700; color: #b12704; }}
   .meta-rating {{ font-size: .8rem; color: var(--muted); }}
-  .card-sales {{ display: flex; flex-direction: column; gap: 3px;
-                 font-size: .8rem; color: #374151; font-weight: 500; }}
+  .sales-highlight {{ display: flex; align-items: stretch; background: #eff6ff;
+                      border: 1px solid #bfdbfe; border-radius: 10px;
+                      overflow: hidden; }}
+  .sales-item {{ flex: 1; padding: 10px 12px; display: flex; flex-direction: column;
+                 gap: 2px; }}
+  .sales-label {{ font-size: .7rem; color: #6b7280; font-weight: 500; }}
+  .sales-value {{ font-size: 1rem; font-weight: 800; color: #1e40af; }}
+  .sales-divider {{ width: 1px; background: #bfdbfe; margin: 8px 0; }}
   .panama-section {{ background: #f8fafc; border-radius: 8px; padding: 12px; }}
   .panama-header {{ display: flex; justify-content: space-between;
                     align-items: center; font-size: .8rem; font-weight: 600;
                     margin-bottom: 6px; }}
   .panama-score {{ font-size: .78rem; }}
   .score-bar-wrap {{ background: #e2e8f0; border-radius: 999px; height: 6px;
-                     overflow: hidden; margin-bottom: 7px; }}
+                     overflow: hidden; margin-bottom: 10px; }}
   .score-bar-fill {{ height: 100%; border-radius: 999px; transition: width .4s; }}
-  .panama-notes {{ font-size: .72rem; color: var(--muted); line-height: 1.4; }}
+  .panama-description {{ display: flex; gap: 6px; align-items: flex-start;
+                          background: #fff; border-radius: 6px; padding: 9px 10px;
+                          border-left: 3px solid #94a3b8; }}
+  .desc-icon {{ font-size: .85rem; flex-shrink: 0; margin-top: 1px; }}
+  .desc-text {{ font-size: .72rem; color: #374151; line-height: 1.5; }}
   .view-btn {{ display: block; text-align: center; background: #1565c0;
                color: #fff; border-radius: 8px; padding: 9px;
                text-decoration: none; font-size: .82rem; font-weight: 600;

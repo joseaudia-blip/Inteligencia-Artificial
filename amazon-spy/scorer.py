@@ -81,9 +81,82 @@ def score_panama(product: dict, category: dict) -> dict:
     else:
         level, emoji = "BAJO", "🔴"
 
+    description = generate_panama_description(product, category, score)
+
     return {
         "score": score,
         "level": level,
         "emoji": emoji,
         "notes": category["panama_notes"],
+        "description": description,
     }
+
+
+_CAT_INSIGHTS = {
+    "belleza": "Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.",
+    "viaje": "Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.",
+    "hogar": "Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.",
+    "mascotas": "El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.",
+    "fitness": "Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.",
+    "bebe": "Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.",
+    "tech": "Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.",
+}
+
+
+def generate_panama_description(product: dict, category: dict, score: int) -> str:
+    """Generate a product-specific Panama market description."""
+    rank = product.get("rank", 50)
+    reviews = product.get("reviews", 0)
+    sales = product.get("monthly_sales_est", 0)
+    price_raw = re.sub(r"[^\d.]", "", product.get("price", "0") or "0")
+    try:
+        price = float(price_raw)
+    except ValueError:
+        price = 0
+
+    parts = []
+
+    # Validation signal based on sales volume
+    if sales >= 2000:
+        parts.append(f"Producto muy validado con ~{sales:,} ventas/mes en Amazon USA.")
+    elif sales >= 800:
+        parts.append(f"Buen volumen con ~{sales:,} ventas/mes — señal de demanda real y sostenida.")
+    else:
+        parts.append(f"Volumen moderado de ~{sales:,} ventas/mes en USA.")
+
+    # Competition signal based on reviews
+    if reviews < 100:
+        parts.append(
+            "Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá."
+        )
+    elif reviews < 500:
+        parts.append(
+            "Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local."
+        )
+    elif reviews < 2000:
+        parts.append(
+            "Mercado validado con competencia moderada. Diferenciación en diseño o packaging puede marcar la diferencia."
+        )
+    else:
+        parts.append(
+            f"Producto muy competido en USA ({reviews:,} reseñas). En Panamá el mercado es más pequeño y hay más espacio."
+        )
+
+    # Price signal
+    if price < 15:
+        parts.append("Precio muy bajo — ideal para primer pedido impulsivo online sin fricción.")
+    elif price <= 35:
+        parts.append("Precio accesible para clase media panameña — compra impulsiva viable en redes.")
+    elif price <= 55:
+        parts.append("Precio medio, requiere buena presentación y construir confianza de marca desde el inicio.")
+    else:
+        parts.append(
+            f"Precio elevado (${price:.0f}). Segmento premium — mercado más reducido pero con mayor margen."
+        )
+
+    # Category-specific insight
+    insight = _CAT_INSIGHTS.get(category["id"], "")
+    if insight:
+        parts.append(insight)
+
+    return " ".join(parts)

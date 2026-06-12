@@ -87,17 +87,27 @@
   .card-meta { display: flex; flex-direction: column; gap: 3px; }
   .meta-price { font-size: 1.05rem; font-weight: 700; color: #b12704; }
   .meta-rating { font-size: .8rem; color: var(--muted); }
-  .card-sales { display: flex; flex-direction: column; gap: 3px;
-                 font-size: .8rem; color: #374151; font-weight: 500; }
+  .sales-highlight { display: flex; align-items: stretch; background: #eff6ff;
+                      border: 1px solid #bfdbfe; border-radius: 10px;
+                      overflow: hidden; }
+  .sales-item { flex: 1; padding: 10px 12px; display: flex; flex-direction: column;
+                 gap: 2px; }
+  .sales-label { font-size: .7rem; color: #6b7280; font-weight: 500; }
+  .sales-value { font-size: 1rem; font-weight: 800; color: #1e40af; }
+  .sales-divider { width: 1px; background: #bfdbfe; margin: 8px 0; }
   .panama-section { background: #f8fafc; border-radius: 8px; padding: 12px; }
   .panama-header { display: flex; justify-content: space-between;
                     align-items: center; font-size: .8rem; font-weight: 600;
                     margin-bottom: 6px; }
   .panama-score { font-size: .78rem; }
   .score-bar-wrap { background: #e2e8f0; border-radius: 999px; height: 6px;
-                     overflow: hidden; margin-bottom: 7px; }
+                     overflow: hidden; margin-bottom: 10px; }
   .score-bar-fill { height: 100%; border-radius: 999px; transition: width .4s; }
-  .panama-notes { font-size: .72rem; color: var(--muted); line-height: 1.4; }
+  .panama-description { display: flex; gap: 6px; align-items: flex-start;
+                          background: #fff; border-radius: 6px; padding: 9px 10px;
+                          border-left: 3px solid #94a3b8; }
+  .desc-icon { font-size: .85rem; flex-shrink: 0; margin-top: 1px; }
+  .desc-text { font-size: .72rem; color: #374151; line-height: 1.5; }
   .view-btn { display: block; text-align: center; background: #1565c0;
                color: #fff; border-radius: 8px; padding: 9px;
                text-decoration: none; font-size: .82rem; font-weight: 600;
@@ -125,7 +135,7 @@
 <!-- HEADER -->
 <div class="header">
   <h1>📦 Amazon Fashion Spy — Panamá</h1>
-  <div class="header-sub">🗓️ Friday 12 Jun 2026 · ⏰ 21:02 · Amazon USA</div>
+  <div class="header-sub">🗓️ Friday 12 Jun 2026 · ⏰ 21:14 · Amazon USA</div>
   <div class="header-stats">
     <span class="stat-pill">🔍 7 categorías</span>
     <span class="stat-pill">📦 35 productos</span>
@@ -209,17 +219,29 @@
       <span class="meta-price">$18.99</span>
       <span class="meta-rating">★★★★½ <small>(12,847 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~6,000 uds/mes</span>
-      <span>💵 Revenue ~$113,940/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$113,940</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta demanda en belleza. Viral en TikTok/IG. Sin talla = sin devoluciones.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (12,847 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0CX1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -238,17 +260,29 @@
       <span class="meta-price">$29.99</span>
       <span class="meta-rating">★★★★½ <small>(22,341 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~6,000 uds/mes</span>
-      <span>💵 Revenue ~$179,940/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$179,940</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (22,341 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -267,17 +301,29 @@
       <span class="meta-price">$19.99</span>
       <span class="meta-rating">★★★★½ <small>(9,876 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$69,965/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$69,965</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (9,876 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ2B" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -296,17 +342,29 @@
       <span class="meta-price">$16.99</span>
       <span class="meta-rating">★★★★½ <small>(312 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$23,786/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$23,786</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ4D" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -325,17 +383,29 @@
       <span class="meta-price">$22.99</span>
       <span class="meta-rating">★★★★½ <small>(78 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~850 uds/mes</span>
-      <span>💵 Revenue ~$19,542/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$19,542</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ5E" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -365,17 +435,29 @@
       <span class="meta-price">$18.99</span>
       <span class="meta-rating">★★★★½ <small>(12,847 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~6,000 uds/mes</span>
-      <span>💵 Revenue ~$113,940/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$113,940</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta demanda en belleza. Viral en TikTok/IG. Sin talla = sin devoluciones.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (12,847 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0CX1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -394,17 +476,29 @@
       <span class="meta-price">$12.99</span>
       <span class="meta-rating">★★★★ <small>(8,234 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$45,465/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$45,465</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 88/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:88%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta demanda en belleza. Viral en TikTok/IG. Sin talla = sin devoluciones.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (8,234 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0CX2B" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -423,17 +517,29 @@
       <span class="meta-price">$9.99</span>
       <span class="meta-rating">★★★★½ <small>(3,421 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$34,965/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$34,965</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 90/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:90%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta demanda en belleza. Viral en TikTok/IG. Sin talla = sin devoluciones.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (3,421 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0CX3C" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -452,17 +558,29 @@
       <span class="meta-price">$7.49</span>
       <span class="meta-rating">★★★★ <small>(567 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~2,200 uds/mes</span>
-      <span>💵 Revenue ~$16,478/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$16,478</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 91/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:91%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta demanda en belleza. Viral en TikTok/IG. Sin talla = sin devoluciones.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Mercado validado con competencia moderada. Diferenciación en diseño o packaging puede marcar la diferencia. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0CX4D" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -481,17 +599,29 @@
       <span class="meta-price">$14.99</span>
       <span class="meta-rating">★★★★½ <small>(89 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$20,986/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$20,986</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 96/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:96%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta demanda en belleza. Viral en TikTok/IG. Sin talla = sin devoluciones.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0CX5E" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -510,17 +640,29 @@
       <span class="meta-price">$29.99</span>
       <span class="meta-rating">★★★★½ <small>(22,341 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~6,000 uds/mes</span>
-      <span>💵 Revenue ~$179,940/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$179,940</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (22,341 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -539,17 +681,29 @@
       <span class="meta-price">$19.99</span>
       <span class="meta-rating">★★★★½ <small>(9,876 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$69,965/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$69,965</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (9,876 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ2B" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -568,17 +722,29 @@
       <span class="meta-price">$11.99</span>
       <span class="meta-rating">★★★★ <small>(4,532 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~2,200 uds/mes</span>
-      <span>💵 Revenue ~$26,378/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$26,378</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 86/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:86%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (4,532 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ3C" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -597,17 +763,29 @@
       <span class="meta-price">$16.99</span>
       <span class="meta-rating">★★★★½ <small>(312 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$23,786/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$23,786</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ4D" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -626,17 +804,29 @@
       <span class="meta-price">$22.99</span>
       <span class="meta-rating">★★★★½ <small>(78 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~850 uds/mes</span>
-      <span>💵 Revenue ~$19,542/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$19,542</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0VJ5E" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -655,17 +845,29 @@
       <span class="meta-price">$34.99</span>
       <span class="meta-rating">★★★★½ <small>(18,923 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~6,000 uds/mes</span>
-      <span>💵 Revenue ~$209,940/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$209,940</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 97/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:97%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Apartamentos compactos en PtyCity. Antes/después viral en redes.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (18,923 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0HG1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -684,17 +886,29 @@
       <span class="meta-price">$26.99</span>
       <span class="meta-rating">★★★★½ <small>(7,654 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$94,465/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$94,465</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 97/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:97%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Apartamentos compactos en PtyCity. Antes/después viral en redes.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (7,654 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0HG2B" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -713,17 +927,29 @@
       <span class="meta-price">$21.99</span>
       <span class="meta-rating">★★★★ <small>(3,210 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~2,200 uds/mes</span>
-      <span>💵 Revenue ~$48,378/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$48,378</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 95/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:95%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Apartamentos compactos en PtyCity. Antes/después viral en redes.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (3,210 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0HG3C" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -742,17 +968,29 @@
       <span class="meta-price">$27.99</span>
       <span class="meta-rating">★★★★½ <small>(145 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$39,186/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$39,186</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Apartamentos compactos en PtyCity. Antes/después viral en redes.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0HG4D" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -771,17 +1009,29 @@
       <span class="meta-price">$18.99</span>
       <span class="meta-rating">★★★★ <small>(56 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~850 uds/mes</span>
-      <span>💵 Revenue ~$16,141/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$16,141</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Apartamentos compactos en PtyCity. Antes/después viral en redes.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0HG5E" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -800,17 +1050,29 @@
       <span class="meta-price">$13.99</span>
       <span class="meta-rating">★★★★½ <small>(15,432 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$48,965/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$48,965</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 83/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:83%;background:#e65100"></div></div>
-      <div class="panama-notes">Mercado emocional: los dueños no escatiman. Recompra alta.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (15,432 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0PT1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -829,17 +1091,29 @@
       <span class="meta-price">$15.99</span>
       <span class="meta-rating">★★★★ <small>(6,789 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~2,200 uds/mes</span>
-      <span>💵 Revenue ~$35,178/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$35,178</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 93/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:93%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Mercado emocional: los dueños no escatiman. Recompra alta.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (6,789 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0PT2B" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -858,17 +1132,29 @@
       <span class="meta-price">$55.99</span>
       <span class="meta-rating">★★★★ <small>(4,312 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$78,386/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$78,386</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 82/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:82%;background:#e65100"></div></div>
-      <div class="panama-notes">Mercado emocional: los dueños no escatiman. Recompra alta.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (4,312 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio elevado ($56). Segmento premium — mercado más reducido pero con mayor margen. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0PT3C" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -887,17 +1173,29 @@
       <span class="meta-price">$16.99</span>
       <span class="meta-rating">★★★★½ <small>(231 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$23,786/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$23,786</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 98/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:98%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Mercado emocional: los dueños no escatiman. Recompra alta.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0PT4D" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -916,17 +1214,29 @@
       <span class="meta-price">$19.99</span>
       <span class="meta-rating">★★★★ <small>(43 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~850 uds/mes</span>
-      <span>💵 Revenue ~$16,992/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$16,992</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 99/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:99%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Mercado emocional: los dueños no escatiman. Recompra alta.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0PT5E" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -945,17 +1255,29 @@
       <span class="meta-price">$21.99</span>
       <span class="meta-rating">★★★★½ <small>(31,245 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~6,000 uds/mes</span>
-      <span>💵 Revenue ~$131,940/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$131,940</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 94/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:94%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (31,245 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0FT1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -974,17 +1296,29 @@
       <span class="meta-price">$28.99</span>
       <span class="meta-rating">★★★★½ <small>(12,098 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$101,465/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$101,465</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 94/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:94%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (12,098 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0FT2B" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1003,17 +1337,29 @@
       <span class="meta-price">$16.99</span>
       <span class="meta-rating">★★★★ <small>(5,432 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~2,200 uds/mes</span>
-      <span>💵 Revenue ~$37,378/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$37,378</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 92/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:92%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (5,432 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0FT3C" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1032,17 +1378,29 @@
       <span class="meta-price">$12.99</span>
       <span class="meta-rating">★★★★½ <small>(187 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$18,186/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$18,186</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 85/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:85%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0FT4D" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1061,17 +1419,29 @@
       <span class="meta-price">$24.99</span>
       <span class="meta-rating">★★★★½ <small>(62 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~850 uds/mes</span>
-      <span>💵 Revenue ~$21,242/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$21,242</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0FT5E" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1090,17 +1460,29 @@
       <span class="meta-price">$24.99</span>
       <span class="meta-rating">★★★★½ <small>(9,871 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$87,465/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$87,465</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 87/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:87%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta natalidad. Compra emocional: el precio no es barrera para los padres.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (9,871 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0BB1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1119,17 +1501,29 @@
       <span class="meta-price">$39.99</span>
       <span class="meta-rating">★★★★½ <small>(6,234 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~2,200 uds/mes</span>
-      <span>💵 Revenue ~$87,978/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$87,978</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 83/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:83%;background:#e65100"></div></div>
-      <div class="panama-notes">Alta natalidad. Compra emocional: el precio no es barrera para los padres.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (6,234 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio medio, requiere buena presentación y construir confianza de marca desde el inicio. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0BB2B" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1148,17 +1542,29 @@
       <span class="meta-price">$18.99</span>
       <span class="meta-rating">★★★★½ <small>(3,456 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$26,586/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$26,586</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 84/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:84%;background:#e65100"></div></div>
-      <div class="panama-notes">Alta natalidad. Compra emocional: el precio no es barrera para los padres.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (3,456 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0BB3C" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1177,17 +1583,29 @@
       <span class="meta-price">$16.99</span>
       <span class="meta-rating">★★★★ <small>(201 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~850 uds/mes</span>
-      <span>💵 Revenue ~$14,441/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$14,441</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 88/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:88%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta natalidad. Compra emocional: el precio no es barrera para los padres.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0BB4D" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1206,17 +1624,29 @@
       <span class="meta-price">$22.99</span>
       <span class="meta-rating">★★★★½ <small>(34 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~850 uds/mes</span>
-      <span>💵 Revenue ~$19,542/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$19,542</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#2e7d32">🟢 91/100 — ALTO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:91%;background:#2e7d32"></div></div>
-      <div class="panama-notes">Alta natalidad. Compra emocional: el precio no es barrera para los padres.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0BB5E" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1235,17 +1665,29 @@
       <span class="meta-price">$35.99</span>
       <span class="meta-rating">★★★★½ <small>(28,654 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~6,000 uds/mes</span>
-      <span>💵 Revenue ~$215,940/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$215,940</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 78/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:78%;background:#e65100"></div></div>
-      <div class="panama-notes">Alta penetración smartphones. Accesorios con identidad visual se diferencian.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (28,654 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio medio, requiere buena presentación y construir confianza de marca desde el inicio. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0TL1A" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1264,17 +1706,29 @@
       <span class="meta-price">$14.99</span>
       <span class="meta-rating">★★★★½ <small>(11,234 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~3,500 uds/mes</span>
-      <span>💵 Revenue ~$52,465/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$52,465</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 70/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:70%;background:#e65100"></div></div>
-      <div class="panama-notes">Alta penetración smartphones. Accesorios con identidad visual se diferencian.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (11,234 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0TL2B" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1293,17 +1747,29 @@
       <span class="meta-price">$24.99</span>
       <span class="meta-rating">★★★★ <small>(7,832 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$34,986/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$34,986</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 77/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:77%;background:#e65100"></div></div>
-      <div class="panama-notes">Alta penetración smartphones. Accesorios con identidad visual se diferencian.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (7,832 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0TL3C" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1322,17 +1788,29 @@
       <span class="meta-price">$11.99</span>
       <span class="meta-rating">★★★★ <small>(423 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~1,400 uds/mes</span>
-      <span>💵 Revenue ~$16,786/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$16,786</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 71/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:71%;background:#e65100"></div></div>
-      <div class="panama-notes">Alta penetración smartphones. Accesorios con identidad visual se diferencian.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0TL4D" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
@@ -1351,17 +1829,29 @@
       <span class="meta-price">$9.99</span>
       <span class="meta-rating">★★★★½ <small>(67 reseñas)</small></span>
     </div>
-    <div class="card-sales">
-      <span>📈 ~850 uds/mes</span>
-      <span>💵 Revenue ~$8,492/mes</span>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$8,492</div>
+      </div>
     </div>
+
     <div class="panama-section">
       <div class="panama-header">
         <span>🇵🇦 Potencial Panamá</span>
         <span class="panama-score" style="color:#e65100">🟡 76/100 — MEDIO</span>
       </div>
       <div class="score-bar-wrap"><div class="score-bar-fill" style="width:76%;background:#e65100"></div></div>
-      <div class="panama-notes">Alta penetración smartphones. Accesorios con identidad visual se diferencian.</div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
     </div>
     <a class="view-btn" href="https://www.amazon.com/dp/B0TL5E" target="_blank" rel="noopener">Ver en Amazon →</a>
   </div>
