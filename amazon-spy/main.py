@@ -1,16 +1,15 @@
 """
 Amazon Fashion Spy — Main orchestrator
-Runs daily via GitHub Actions at 6:00 AM Panama time (11:00 AM UTC).
-Report is published to docs/index.html → accessible via GitHub Pages.
+Designed to run as a Claude Code Remote Routine at 6:00 AM Panama time.
+Uses requests+BeautifulSoup (no browser needed).
 """
 
-import asyncio
 import json
 from datetime import datetime
 from pathlib import Path
 
 from categories import CATEGORIES
-from scraper import run_scraper
+from scraper_http import run_scraper
 from scorer import score_panama, estimate_monthly_sales
 from report import generate_html
 
@@ -28,66 +27,67 @@ def enrich(products: list[dict], category: dict) -> list[dict]:
     return enriched
 
 
-def print_summary(all_products: dict[str, list[dict]]) -> None:
+def print_summary(all_products: dict) -> None:
     total = sum(len(v) for v in all_products.values())
     print(f"\n{'='*55}")
-    print(f"  AMAZON SPY — RESUMEN")
+    print(f"  AMAZON SPY — {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}")
+    print(f"  Total productos: {total}")
     print(f"{'='*55}")
-    print(f"  Total productos encontrados: {total}")
     for cat in CATEGORIES:
-        products = all_products.get(cat["id"], [])
-        if products:
-            top = products[0]
+        prods = all_products.get(cat["id"], [])
+        if prods:
+            top = prods[0]
             print(
                 f"  {cat['emoji']} {cat['name']:22s} "
-                f"{len(products):>3} productos | "
+                f"{len(prods):>3} prods | "
                 f"top 🇵🇦 {top['panama']['score']}/100"
             )
     print(f"{'='*55}\n")
 
 
-async def main() -> None:
+def main() -> None:
     now = datetime.utcnow()
-    print(f"\n🚀 Iniciando Amazon Spy — {now.strftime('%Y-%m-%d %H:%M UTC')}")
-    print(f"   Categorías: {len(CATEGORIES)}\n")
+    print(f"\n🚀 Amazon Spy — {now.strftime('%Y-%m-%d %H:%M UTC')}")
 
-    # 1 — Scrape
-    raw_results = await run_scraper(CATEGORIES)
+    # 1 — Scrape (requests-based, no browser needed)
+    raw = run_scraper(CATEGORIES)
 
-    # 2 — Enrich
+    # 2 — Enrich with Panama score
     cat_map = {c["id"]: c for c in CATEGORIES}
-    all_products: dict[str, list[dict]] = {}
-    for cat_id, products in raw_results.items():
-        all_products[cat_id] = enrich(products, cat_map[cat_id])
+    all_products = {
+        cat_id: enrich(prods, cat_map[cat_id])
+        for cat_id, prods in raw.items()
+    }
 
-    # 3 — Summary to stdout (visible in GitHub Actions logs)
+    total = sum(len(v) for v in all_products.values())
+    if total == 0:
+        print("⚠️  No products found — Amazon may be blocking. Report skipped.")
+        return
+
     print_summary(all_products)
 
-    # 4 — Generate HTML report
+    # 3 — Generate HTML report
     REPORTS_DIR.mkdir(exist_ok=True)
-    date_slug  = now.strftime("%Y-%m-%d")
-    html       = generate_html(all_products, CATEGORIES, now)
+    date_slug = now.strftime("%Y-%m-%d")
+    html = generate_html(all_products, CATEGORIES, now)
 
-    report_path = REPORTS_DIR / f"{date_slug}.html"
-    report_path.write_text(html, encoding="utf-8")
-    print(f"✅ Reporte: {report_path}")
+    (REPORTS_DIR / f"{date_slug}.html").write_text(html, encoding="utf-8")
+    (REPORTS_DIR / "latest.html").write_text(html, encoding="utf-8")
 
-    # 5 — Save JSON (for future analysis / history)
-    json_path = REPORTS_DIR / f"{date_slug}.json"
-    json_path.write_text(
-        json.dumps(all_products, ensure_ascii=False, indent=2),
-        encoding="utf-8",
+    # 4 — Save JSON
+    (REPORTS_DIR / f"{date_slug}.json").write_text(
+        json.dumps(all_products, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    print(f"✅ JSON: {json_path}")
 
-    # 6 — Publish to GitHub Pages (docs/index.html)
+    # 5 — Publish to GitHub Pages
     DOCS_DIR.mkdir(exist_ok=True)
     (DOCS_DIR / ".nojekyll").touch()
     (DOCS_DIR / "index.html").write_text(html, encoding="utf-8")
-    print(f"✅ GitHub Pages: docs/index.html actualizado")
 
+    print(f"✅ Reporte generado: {date_slug}")
+    print(f"✅ GitHub Pages actualizado: docs/index.html")
     print("\n🏁 Done.\n")
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
