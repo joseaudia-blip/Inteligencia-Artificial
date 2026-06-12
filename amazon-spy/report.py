@@ -112,6 +112,173 @@ def _category_summary_card(cat: dict, products: list[dict]) -> str:
 </div>"""
 
 
+def generate_email_html(
+    all_products: dict[str, list[dict]],
+    categories: list[dict],
+    run_date: datetime,
+) -> str:
+    """Generate a simplified, email-client-compatible HTML (inline CSS, no JS)."""
+    date_str = run_date.strftime("%A %d %b %Y")
+    total = sum(len(v) for v in all_products.values())
+    cat_map = {c["id"]: c for c in categories}
+
+    flat = []
+    for cat_id, products in all_products.items():
+        for p in products:
+            flat.append((p, cat_map[cat_id]))
+    top10 = sorted(flat, key=lambda x: x[0]["panama"]["score"], reverse=True)[:10]
+
+    rows = ""
+    for i, (p, cat) in enumerate(top10, 1):
+        score = p["panama"]["score"]
+        pcolor = _panama_color(score)
+        sales = p.get("monthly_sales_est", 0)
+        price_n = _price_num(p.get("price", "0"))
+        revenue = f"${sales * price_n:,.0f}" if price_n else "—"
+        title = p.get("title", "")[:65]
+        url = p.get("url", "#")
+        img = p.get("image", "")
+        price = p.get("price") or "—"
+        rating = p.get("rating", 0)
+        reviews = p.get("reviews", 0)
+        desc = p["panama"].get("description", "")[:200]
+
+        rows += f"""
+<tr style="border-bottom:1px solid #e2e8f0;">
+  <td style="padding:16px 8px;vertical-align:top;width:60px;text-align:center;">
+    <div style="background:#1a1a2e;color:#fff;border-radius:50%;width:32px;height:32px;
+                line-height:32px;font-weight:800;font-size:.8rem;margin:0 auto 8px;">
+      {i}
+    </div>
+    {'<img src="' + img + '" width="56" height="56" style="object-fit:contain;border-radius:6px;background:#f8fafc;" alt="">' if img else ''}
+  </td>
+  <td style="padding:16px 8px;vertical-align:top;">
+    <div style="font-size:.7rem;font-weight:700;color:{cat['color']};margin-bottom:4px;">
+      {cat['emoji']} {cat['name']}
+    </div>
+    <a href="{url}" style="font-size:.85rem;font-weight:600;color:#1a1a2e;text-decoration:none;line-height:1.4;display:block;margin-bottom:6px;">
+      {title}…
+    </a>
+    <table cellpadding="0" cellspacing="0" style="width:100%;margin-bottom:8px;">
+      <tr>
+        <td style="font-size:.75rem;color:#6b7280;">Precio</td>
+        <td style="font-size:.75rem;color:#6b7280;">Rating</td>
+        <td style="font-size:.75rem;color:#6b7280;">Reseñas</td>
+      </tr>
+      <tr>
+        <td style="font-size:.85rem;font-weight:700;color:#b12704;">{price}</td>
+        <td style="font-size:.85rem;font-weight:600;">⭐ {rating}</td>
+        <td style="font-size:.85rem;font-weight:600;">{reviews:,}</td>
+      </tr>
+    </table>
+    <table cellpadding="0" cellspacing="6" style="background:#eff6ff;border-radius:8px;
+           padding:8px;width:100%;margin-bottom:8px;">
+      <tr>
+        <td style="font-size:.68rem;color:#6b7280;font-weight:500;">📈 Ventas est./mes</td>
+        <td style="font-size:.68rem;color:#6b7280;font-weight:500;">💵 Revenue est./mes</td>
+      </tr>
+      <tr>
+        <td style="font-size:.9rem;font-weight:800;color:#1e40af;">~{sales:,} uds</td>
+        <td style="font-size:.9rem;font-weight:800;color:#1e40af;">{revenue}</td>
+      </tr>
+    </table>
+    <table cellpadding="0" cellspacing="0" style="width:100%;margin-bottom:6px;">
+      <tr>
+        <td style="font-size:.75rem;font-weight:600;color:#374151;">🇵🇦 Potencial Panamá</td>
+        <td align="right" style="font-size:.75rem;font-weight:700;color:{pcolor};">
+          {p['panama']['emoji']} {score}/100 — {p['panama']['level']}
+        </td>
+      </tr>
+    </table>
+    <div style="background:#e2e8f0;border-radius:99px;height:5px;margin-bottom:8px;">
+      <div style="background:{pcolor};width:{score}%;height:5px;border-radius:99px;"></div>
+    </div>
+    <div style="background:#fff;border-left:3px solid #94a3b8;border-radius:4px;
+                padding:7px 9px;font-size:.7rem;color:#374151;line-height:1.5;">
+      💡 {desc}
+    </div>
+    <a href="{url}" style="display:inline-block;margin-top:8px;background:#1565c0;
+       color:#fff;border-radius:6px;padding:6px 14px;font-size:.75rem;
+       font-weight:600;text-decoration:none;">Ver en Amazon →</a>
+  </td>
+</tr>"""
+
+    cat_summary = ""
+    for cat in categories:
+        prods = all_products.get(cat["id"], [])
+        count = len(prods)
+        avg = round(sum(p["panama"]["score"] for p in prods) / count) if prods else 0
+        cat_summary += f"""
+<td style="text-align:center;padding:8px 6px;vertical-align:top;">
+  <div style="font-size:1.4rem;">{cat['emoji']}</div>
+  <div style="font-size:.68rem;color:#6b7280;font-weight:600;margin:3px 0;">{cat['name']}</div>
+  <div style="font-size:.85rem;font-weight:700;color:{cat['color']};">{count} prods</div>
+  <div style="font-size:.68rem;color:#6b7280;">🇵🇦 {avg}/100</div>
+</td>"""
+
+    return f"""<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Amazon Spy — {date_str}</title></head>
+<body style="margin:0;padding:0;background:#f4f6f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+<table cellpadding="0" cellspacing="0" width="100%" style="max-width:620px;margin:0 auto;">
+  <tr><td>
+
+    <!-- HEADER -->
+    <table cellpadding="0" cellspacing="0" width="100%"
+           style="background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px 12px 0 0;margin-top:16px;">
+      <tr><td style="padding:28px 24px;text-align:center;">
+        <div style="font-size:1.4rem;font-weight:800;color:#fff;letter-spacing:-.5px;">
+          📦 Amazon Fashion Spy — Panamá
+        </div>
+        <div style="font-size:.85rem;color:#94a3b8;margin-top:6px;">
+          🗓️ {date_str} · ⏰ 06:00 AM · Amazon USA
+        </div>
+        <table cellpadding="0" cellspacing="8" style="margin:14px auto 0;">
+          <tr>
+            <td style="background:rgba(255,255,255,.1);border-radius:99px;padding:5px 14px;
+                        font-size:.78rem;font-weight:600;color:#fff;">🔍 7 categorías</td>
+            <td style="background:rgba(255,255,255,.1);border-radius:99px;padding:5px 14px;
+                        font-size:.78rem;font-weight:600;color:#fff;">📦 {total} productos</td>
+            <td style="background:rgba(255,255,255,.1);border-radius:99px;padding:5px 14px;
+                        font-size:.78rem;font-weight:600;color:#fff;">🇵🇦 Mercado Panamá</td>
+          </tr>
+        </table>
+      </td></tr>
+    </table>
+
+    <!-- RESUMEN CATEGORÍAS -->
+    <table cellpadding="0" cellspacing="0" width="100%"
+           style="background:#fff;padding:16px;">
+      <tr><td colspan="7" style="font-size:.9rem;font-weight:700;padding-bottom:12px;">
+        📊 Resumen por categoría
+      </td></tr>
+      <tr>{cat_summary}</tr>
+    </table>
+
+    <!-- TOP 10 -->
+    <table cellpadding="0" cellspacing="0" width="100%"
+           style="background:#fff;border-top:1px solid #e2e8f0;">
+      <tr><td colspan="2" style="padding:16px 16px 4px;font-size:.9rem;font-weight:700;">
+        🏆 Top 10 del día — Mayor potencial en Panamá
+      </td></tr>
+      {rows}
+    </table>
+
+    <!-- FOOTER -->
+    <table cellpadding="0" cellspacing="0" width="100%"
+           style="background:#f8fafc;border-radius:0 0 12px 12px;border-top:1px solid #e2e8f0;">
+      <tr><td style="padding:14px;text-align:center;font-size:.72rem;color:#9ca3af;">
+        Generado automáticamente · Amazon USA Best Sellers · {date_str}<br>
+        El reporte interactivo completo está adjunto (reporte.html)
+      </td></tr>
+    </table>
+
+  </td></tr>
+</table>
+</body></html>"""
+
+
 def generate_html(
     all_products: dict[str, list[dict]],
     categories: list[dict],

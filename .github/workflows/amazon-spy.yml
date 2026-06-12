@@ -2,7 +2,7 @@ name: Amazon Fashion Spy — Daily 6AM Panama
 
 on:
   schedule:
-    # 11:00 UTC = 06:00 Panama time (UTC-5)
+    # 11:00 UTC = 06:00 AM Panama time (UTC-5)
     - cron: "0 11 * * *"
   workflow_dispatch: # Allow manual trigger from GitHub UI
 
@@ -27,16 +27,20 @@ jobs:
         working-directory: amazon-spy
         run: |
           pip install -r requirements.txt
-          playwright install chromium --with-deps
+          playwright install chromium
 
-      - name: Run scraper
+      - name: Run scraper and send email
         working-directory: amazon-spy
+        env:
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
         run: python main.py
 
-      - name: Commit and push report
+      - name: Commit and push reports
         run: |
           git config user.name  "Amazon Spy Bot"
-          git config user.email "bot@amazon-spy"
+          git config user.email "bot@amazon-spy.local"
           git add amazon-spy/reports/
           git diff --staged --quiet || git commit -m "📦 Daily report $(date -u '+%Y-%m-%d') [skip ci]"
           git push
