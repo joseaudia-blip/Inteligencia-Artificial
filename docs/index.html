@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Spy — Friday 12 Jun 2026</title>
+<meta name="theme-color" content="#1a1a2e">
+<style>
+  :root {
+    --radius: 14px;
+    --shadow: 0 2px 12px rgba(0,0,0,.08);
+    --bg: #f0f2f5;
+    --surface: #fff;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+          background: var(--bg); color: var(--text); font-size: 16px; }
+
+  /* ── HEADER ─────────────────────────────────── */
+  .header { background: linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);
+             color: #fff; padding: 24px 20px 20px; text-align: center; }
+  .header h1 { font-size: clamp(1.1rem,4vw,1.6rem); font-weight: 800;
+                letter-spacing: -.5px; line-height: 1.2; }
+  .header-sub { color: #94a3b8; font-size: .85rem; margin-top: 6px; }
+  .header-stats { display: flex; justify-content: center; gap: 8px;
+                   margin-top: 14px; flex-wrap: wrap; }
+  .stat-pill { background: rgba(255,255,255,.12); border-radius: 999px;
+                padding: 6px 14px; font-size: .8rem; font-weight: 600; }
+
+  /* ── SECTIONS ────────────────────────────────── */
+  .section { max-width: 1300px; margin: 20px auto; padding: 0 12px; }
+  .section-title { font-size: 1rem; font-weight: 700; margin-bottom: 14px;
+                    display: flex; align-items: center; gap: 8px; }
+
+  /* ── SUMMARY GRID ────────────────────────────── */
+  .summary-grid { display: grid;
+                   grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
+                   gap: 10px; }
+  .summary-card { background: var(--surface); border-radius: var(--radius);
+                   padding: 14px 12px; box-shadow: var(--shadow); }
+  .sum-emoji { font-size: 1.5rem; }
+  .sum-name { font-size: .72rem; color: var(--muted); margin: 4px 0 2px; font-weight: 600; }
+  .sum-count { font-size: 1rem; font-weight: 700; }
+  .sum-score { font-size: .72rem; color: var(--muted); margin-top: 3px; }
+  .sum-top { font-size: .68rem; color: var(--muted); margin-top: 3px;
+              white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* ── STICKY FILTER BAR ───────────────────────── */
+  .filter-bar-wrap { position: sticky; top: 0; z-index: 100;
+                      background: var(--surface);
+                      border-bottom: 1px solid #e2e8f0;
+                      box-shadow: 0 2px 8px rgba(0,0,0,.07); }
+  .filter-bar { max-width: 1300px; margin: 0 auto;
+                 display: flex; gap: 8px; padding: 10px 12px;
+                 overflow-x: auto; -webkit-overflow-scrolling: touch;
+                 scrollbar-width: none; }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-btn { flex-shrink: 0; background: var(--bg);
+                 border: 1.5px solid #e2e8f0; border-radius: 999px;
+                 padding: 10px 16px; font-size: .8rem; font-weight: 600;
+                 cursor: pointer; transition: all .18s; color: var(--text);
+                 min-height: 44px; white-space: nowrap; }
+  .filter-btn.active { background: var(--cat-color,#1565c0);
+                        border-color: var(--cat-color,#1565c0); color: #fff; }
+
+  /* ── PRODUCT GRID ────────────────────────────── */
+  .products-grid { max-width: 1300px; margin: 0 auto;
+                    padding: 12px 12px 48px;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+                    gap: 14px; }
+
+  /* ── PRODUCT CARD ────────────────────────────── */
+  .product-card { background: var(--surface); border-radius: var(--radius);
+                   box-shadow: var(--shadow); overflow: hidden;
+                   display: flex; flex-direction: column; position: relative; }
+  .card-rank { position: absolute; top: 10px; left: 10px;
+                background: #1a1a2e; color: #fff; border-radius: 999px;
+                font-size: .72rem; font-weight: 700; padding: 3px 10px; z-index: 2; }
+  .card-image-wrap { height: 190px; background: #f8fafc; display: flex;
+                      align-items: center; justify-content: center; overflow: hidden; }
+  .card-image { width: 100%; height: 100%; object-fit: contain; padding: 14px; }
+  .card-image-placeholder { font-size: 3rem; }
+  .card-body { padding: 14px 14px 16px; display: flex;
+                flex-direction: column; gap: 10px; flex: 1; }
+  .card-cat-badge { font-size: .7rem; font-weight: 700; border-radius: 999px;
+                     padding: 3px 10px; display: inline-block; width: fit-content; }
+  .card-title { font-size: .9rem; font-weight: 600; color: var(--text);
+                 text-decoration: none; line-height: 1.45;
+                 display: -webkit-box; -webkit-line-clamp: 2;
+                 -webkit-box-orient: vertical; overflow: hidden; }
+  .card-meta { display: flex; flex-direction: column; gap: 3px; }
+  .meta-price { font-size: 1.1rem; font-weight: 700; color: #b12704; }
+  .meta-rating { font-size: .82rem; color: var(--muted); }
+
+  /* ── SALES HIGHLIGHT BOX ─────────────────────── */
+  .sales-highlight { display: flex; background: #eff6ff;
+                      border: 1px solid #bfdbfe; border-radius: 10px;
+                      overflow: hidden; }
+  .sales-item { flex: 1; padding: 11px 12px; display: flex;
+                 flex-direction: column; gap: 2px; }
+  .sales-label { font-size: .68rem; color: #6b7280; font-weight: 500; }
+  .sales-value { font-size: 1.05rem; font-weight: 800; color: #1e40af; }
+  .sales-divider { width: 1px; background: #bfdbfe; margin: 8px 0; }
+
+  /* ── PANAMA SECTION ──────────────────────────── */
+  .panama-section { background: #f8fafc; border-radius: 10px; padding: 12px; }
+  .panama-header { display: flex; justify-content: space-between;
+                    align-items: center; font-size: .8rem; font-weight: 700;
+                    margin-bottom: 7px; }
+  .panama-score { font-size: .78rem; font-weight: 700; }
+  .score-bar-wrap { background: #e2e8f0; border-radius: 999px; height: 8px;
+                     overflow: hidden; margin-bottom: 10px; }
+  .score-bar-fill { height: 100%; border-radius: 999px; }
+  .panama-description { display: flex; gap: 6px; align-items: flex-start;
+                          background: #fff; border-radius: 7px; padding: 9px 10px;
+                          border-left: 3px solid #94a3b8; }
+  .desc-icon { font-size: .85rem; flex-shrink: 0; margin-top: 1px; }
+  .desc-text { font-size: .75rem; color: #374151; line-height: 1.55; }
+
+  /* ── VIEW BUTTON ─────────────────────────────── */
+  .view-btn { display: block; text-align: center; background: #1565c0;
+               color: #fff !important; border-radius: 10px; padding: 13px;
+               text-decoration: none; font-size: .88rem; font-weight: 700;
+               margin-top: 4px; letter-spacing: .2px; }
+
+  /* ── TOP 5 GRID ──────────────────────────────── */
+  .top5-grid { display: grid;
+                grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+                gap: 14px; }
+
+  /* ── FOOTER ──────────────────────────────────── */
+  .footer { text-align: center; padding: 20px 16px 40px;
+             font-size: .75rem; color: var(--muted); line-height: 1.6; }
+
+  /* ══ MOBILE OVERRIDES (≤ 640px) ════════════════ */
+  @media (max-width: 640px) {
+    .header { padding: 20px 16px 16px; }
+    .section { padding: 0 10px; }
+    .summary-grid { grid-template-columns: repeat(4,1fr); gap: 8px; }
+    .sum-name, .sum-top { display: none; }   /* compact on phone */
+    .products-grid { grid-template-columns: 1fr; padding: 10px 10px 60px; gap: 12px; }
+    .top5-grid { grid-template-columns: 1fr; }
+    .card-image-wrap { height: 170px; }
+    .card-body { padding: 12px 12px 14px; }
+    .card-title { font-size: .88rem; }
+    .meta-price { font-size: 1.05rem; }
+    .sales-value { font-size: 1rem; }
+    .view-btn { padding: 14px; font-size: .92rem; }
+    .filter-btn { padding: 10px 14px; font-size: .78rem; }
+    .score-bar-wrap { height: 9px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>📦 Amazon Fashion Spy — Panamá</h1>
+  <div class="header-sub">🗓️ Friday 12 Jun 2026 · ⏰ 21:24 · Amazon USA</div>
+  <div class="header-stats">
+    <span class="stat-pill">🔍 7 categorías</span>
+    <span class="stat-pill">📦 35 productos</span>
+    <span class="stat-pill">🇵🇦 Mercado Panamá</span>
+  </div>
+</div>
+
+<!-- RESUMEN POR CATEGORÍA -->
+<div class="section">
+  <div class="section-title">📊 Resumen por categoría</div>
+  <div class="summary-grid">
+    
+<div class="summary-card" style="border-top:3px solid #d63384">
+  <div class="sum-emoji">💄</div>
+  <div class="sum-name">Accesorios Belleza</div>
+  <div class="sum-count" style="color:#d63384">5 productos</div>
+  <div class="sum-score">🇵🇦 Avg 93/100</div>
+  <div class="sum-top">🏆 #1 VELEASHA Makeup Brush Set 18 Pcs — …</div>
+</div>
+<div class="summary-card" style="border-top:3px solid #1565c0">
+  <div class="sum-emoji">🧳</div>
+  <div class="sum-name">Accesorios Viaje</div>
+  <div class="sum-count" style="color:#1565c0">5 productos</div>
+  <div class="sum-score">🇵🇦 Avg 97/100</div>
+  <div class="sum-top">🏆 #1 BAGSMART Packing Cubes for Suitcase…</div>
+</div>
+<div class="summary-card" style="border-top:3px solid #2e7d32">
+  <div class="sum-emoji">🏠</div>
+  <div class="sum-name">Organizadores Hogar</div>
+  <div class="sum-count" style="color:#2e7d32">5 productos</div>
+  <div class="sum-score">🇵🇦 Avg 98/100</div>
+  <div class="sum-top">🏆 #1 Stackable Storage Bins with Lids 6 …</div>
+</div>
+<div class="summary-card" style="border-top:3px solid #e65100">
+  <div class="sum-emoji">🐾</div>
+  <div class="sum-name">Accesorios Mascotas</div>
+  <div class="sum-count" style="color:#e65100">5 productos</div>
+  <div class="sum-score">🇵🇦 Avg 91/100</div>
+  <div class="sum-top">🏆 #2 COMSUN Collapsible Dog Bowl Travel …</div>
+</div>
+<div class="summary-card" style="border-top:3px solid #6a1b9a">
+  <div class="sum-emoji">🏋️</div>
+  <div class="sum-name">Fitness Accesorios</div>
+  <div class="sum-count" style="color:#6a1b9a">5 productos</div>
+  <div class="sum-score">🇵🇦 Avg 93/100</div>
+  <div class="sum-top">🏆 #1 Resistance Bands Set 5 Pack — Heavy…</div>
+</div>
+<div class="summary-card" style="border-top:3px solid #00838f">
+  <div class="sum-emoji">👶</div>
+  <div class="sum-name">Accesorios Bebé</div>
+  <div class="sum-count" style="color:#00838f">5 productos</div>
+  <div class="sum-score">🇵🇦 Avg 87/100</div>
+  <div class="sum-top">🏆 #2 Silicone Baby Feeding Set 6 Piece —…</div>
+</div>
+<div class="summary-card" style="border-top:3px solid #37474f">
+  <div class="sum-emoji">📱</div>
+  <div class="sum-name">Tech Lifestyle</div>
+  <div class="sum-count" style="color:#37474f">5 productos</div>
+  <div class="sum-score">🇵🇦 Avg 74/100</div>
+  <div class="sum-top">🏆 #1 Anker 65W USB C Charger — 3-Port Co…</div>
+</div>
+  </div>
+</div>
+
+<!-- TOP 5 DEL DÍA -->
+<div class="section">
+  <div class="section-title">🏆 Top 5 del día — Mayor potencial en Panamá</div>
+  <div class="top5-grid">
+    
+<div class="product-card" data-category="belleza" data-score="100">
+  <div class="card-rank">#1</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71zLiJVf+QL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#d6338420;color:#d63384">
+      💄 Accesorios Belleza
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0CX1A" target="_blank" rel="noopener">VELEASHA Makeup Brush Set 18 Pcs — Premium Synthetic Kabuki Foundation Blending </a>
+    <div class="card-meta">
+      <span class="meta-price">$18.99</span>
+      <span class="meta-rating">★★★★½ <small>(12,847 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$113,940</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (12,847 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0CX1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="100">
+  <div class="card-rank">#1</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/81YDcMD-QBL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ1A" target="_blank" rel="noopener">BAGSMART Packing Cubes for Suitcase 8 Set — Travel Cube Organizer Luggage Compre</a>
+    <div class="card-meta">
+      <span class="meta-price">$29.99</span>
+      <span class="meta-rating">★★★★½ <small>(22,341 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$179,940</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (22,341 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="100">
+  <div class="card-rank">#2</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71sj1s6BXFL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ2B" target="_blank" rel="noopener">Waterproof Passport Holder Travel Wallet — RFID Blocking Document Organizer for </a>
+    <div class="card-meta">
+      <span class="meta-price">$19.99</span>
+      <span class="meta-rating">★★★★½ <small>(9,876 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$69,965</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (9,876 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ2B" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="100">
+  <div class="card-rank">#7</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71eoPsJK1dL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ4D" target="_blank" rel="noopener">Travel Jewelry Organizer Case — Portable Jewelry Roll Bag with Mirror for Rings </a>
+    <div class="card-meta">
+      <span class="meta-price">$16.99</span>
+      <span class="meta-rating">★★★★½ <small>(312 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$23,786</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ4D" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="100">
+  <div class="card-rank">#11</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71fwWtqZ5QL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ5E" target="_blank" rel="noopener">YAMIU Toiletry Bag Hanging Travel Organizer — Waterproof Dopp Kit Cosmetic Bag f</a>
+    <div class="card-meta">
+      <span class="meta-price">$22.99</span>
+      <span class="meta-rating">★★★★½ <small>(78 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$19,542</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ5E" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- FILTROS (sticky) -->
+<div class="filter-bar-wrap">
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCat(this,'all')">📊 Todas (35)</button><button class="filter-btn" onclick="filterCat(this,'belleza')" style="--cat-color:#d63384">💄 Accesorios Belleza (5)</button><button class="filter-btn" onclick="filterCat(this,'viaje')" style="--cat-color:#1565c0">🧳 Accesorios Viaje (5)</button><button class="filter-btn" onclick="filterCat(this,'hogar')" style="--cat-color:#2e7d32">🏠 Organizadores Hogar (5)</button><button class="filter-btn" onclick="filterCat(this,'mascotas')" style="--cat-color:#e65100">🐾 Accesorios Mascotas (5)</button><button class="filter-btn" onclick="filterCat(this,'fitness')" style="--cat-color:#6a1b9a">🏋️ Fitness Accesorios (5)</button><button class="filter-btn" onclick="filterCat(this,'bebe')" style="--cat-color:#00838f">👶 Accesorios Bebé (5)</button><button class="filter-btn" onclick="filterCat(this,'tech')" style="--cat-color:#37474f">📱 Tech Lifestyle (5)</button>
+  </div>
+</div>
+
+<!-- TODOS LOS PRODUCTOS -->
+<div class="products-grid" id="products-grid">
+  
+<div class="product-card" data-category="belleza" data-score="100">
+  <div class="card-rank">#1</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71zLiJVf+QL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#d6338420;color:#d63384">
+      💄 Accesorios Belleza
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0CX1A" target="_blank" rel="noopener">VELEASHA Makeup Brush Set 18 Pcs — Premium Synthetic Kabuki Foundation Blending </a>
+    <div class="card-meta">
+      <span class="meta-price">$18.99</span>
+      <span class="meta-rating">★★★★½ <small>(12,847 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$113,940</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (12,847 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0CX1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="belleza" data-score="88">
+  <div class="card-rank">#2</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71ZfP5PMAQL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#d6338420;color:#d63384">
+      💄 Accesorios Belleza
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0CX2B" target="_blank" rel="noopener">Jade Roller and Gua Sha Set — Face Roller Skin Care Tool for Anti-Aging Facial M</a>
+    <div class="card-meta">
+      <span class="meta-price">$12.99</span>
+      <span class="meta-rating">★★★★ <small>(8,234 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$45,465</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 88/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:88%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (8,234 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0CX2B" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="belleza" data-score="90">
+  <div class="card-rank">#3</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61j0TL3OkbL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#d6338420;color:#d63384">
+      💄 Accesorios Belleza
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0CX3C" target="_blank" rel="noopener">BEAKEY Silicone Makeup Sponge Set 5 Pcs — Flawless Liquid Powder Foundation Blen</a>
+    <div class="card-meta">
+      <span class="meta-price">$9.99</span>
+      <span class="meta-rating">★★★★½ <small>(3,421 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$34,965</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 90/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:90%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (3,421 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0CX3C" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="belleza" data-score="91">
+  <div class="card-rank">#5</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/51Fua7P0TZL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#d6338420;color:#d63384">
+      💄 Accesorios Belleza
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0CX4D" target="_blank" rel="noopener">Eyelash Curler with 2 Refill Pads — Professional Eye Lash Curler for Natural Lon</a>
+    <div class="card-meta">
+      <span class="meta-price">$7.49</span>
+      <span class="meta-rating">★★★★ <small>(567 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$16,478</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 91/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:91%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Mercado validado con competencia moderada. Diferenciación en diseño o packaging puede marcar la diferencia. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0CX4D" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="belleza" data-score="96">
+  <div class="card-rank">#8</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71R0TG0QBSL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#d6338420;color:#d63384">
+      💄 Accesorios Belleza
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0CX5E" target="_blank" rel="noopener">YANIBEST Silk Scrunchies Hair Ties 20 Pack — No Crease Satin Hair Ribbon for Wom</a>
+    <div class="card-meta">
+      <span class="meta-price">$14.99</span>
+      <span class="meta-rating">★★★★½ <small>(89 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$20,986</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 96/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:96%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá tiene una cultura de belleza muy activa en redes — TikTok e Instagram impulsan ventas de estos productos todo el año.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0CX5E" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="100">
+  <div class="card-rank">#1</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/81YDcMD-QBL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ1A" target="_blank" rel="noopener">BAGSMART Packing Cubes for Suitcase 8 Set — Travel Cube Organizer Luggage Compre</a>
+    <div class="card-meta">
+      <span class="meta-price">$29.99</span>
+      <span class="meta-rating">★★★★½ <small>(22,341 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$179,940</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (22,341 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="100">
+  <div class="card-rank">#2</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71sj1s6BXFL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ2B" target="_blank" rel="noopener">Waterproof Passport Holder Travel Wallet — RFID Blocking Document Organizer for </a>
+    <div class="card-meta">
+      <span class="meta-price">$19.99</span>
+      <span class="meta-rating">★★★★½ <small>(9,876 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$69,965</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (9,876 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ2B" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="86">
+  <div class="card-rank">#4</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61-zK4K2OWL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ3C" target="_blank" rel="noopener">Luggage Scale Digital — 110 lbs Portable Electronic Baggage Scale with Backlit L</a>
+    <div class="card-meta">
+      <span class="meta-price">$11.99</span>
+      <span class="meta-rating">★★★★ <small>(4,532 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$26,378</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 86/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:86%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (4,532 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ3C" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="100">
+  <div class="card-rank">#7</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71eoPsJK1dL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ4D" target="_blank" rel="noopener">Travel Jewelry Organizer Case — Portable Jewelry Roll Bag with Mirror for Rings </a>
+    <div class="card-meta">
+      <span class="meta-price">$16.99</span>
+      <span class="meta-rating">★★★★½ <small>(312 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$23,786</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ4D" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="viaje" data-score="100">
+  <div class="card-rank">#11</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71fwWtqZ5QL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#1565c020;color:#1565c0">
+      🧳 Accesorios Viaje
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0VJ5E" target="_blank" rel="noopener">YAMIU Toiletry Bag Hanging Travel Organizer — Waterproof Dopp Kit Cosmetic Bag f</a>
+    <div class="card-meta">
+      <span class="meta-price">$22.99</span>
+      <span class="meta-rating">★★★★½ <small>(78 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$19,542</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Panamá como hub de tránsito internacional hace de los accesorios de viaje un nicho con demanda natural y constante.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0VJ5E" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="hogar" data-score="97">
+  <div class="card-rank">#1</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/81qRzCrAbnL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#2e7d3220;color:#2e7d32">
+      🏠 Organizadores Hogar
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0HG1A" target="_blank" rel="noopener">Stackable Storage Bins with Lids 6 Pack — Clear Plastic Organizer Boxes for Pant</a>
+    <div class="card-meta">
+      <span class="meta-price">$34.99</span>
+      <span class="meta-rating">★★★★½ <small>(18,923 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$209,940</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 97/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:97%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (18,923 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0HG1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="hogar" data-score="97">
+  <div class="card-rank">#3</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71-5iG6CXWL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#2e7d3220;color:#2e7d32">
+      🏠 Organizadores Hogar
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0HG2B" target="_blank" rel="noopener">Bamboo Drawer Organizer Dividers Set of 8 — Expandable Kitchen Utensil Organizer</a>
+    <div class="card-meta">
+      <span class="meta-price">$26.99</span>
+      <span class="meta-rating">★★★★½ <small>(7,654 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$94,465</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 97/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:97%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (7,654 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0HG2B" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="hogar" data-score="95">
+  <div class="card-rank">#5</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61tU3PB-9JL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#2e7d3220;color:#2e7d32">
+      🏠 Organizadores Hogar
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0HG3C" target="_blank" rel="noopener">Over The Door Organizer 8 Pockets — Large Clear Hanging Pantry Organizer for Bed</a>
+    <div class="card-meta">
+      <span class="meta-price">$21.99</span>
+      <span class="meta-rating">★★★★ <small>(3,210 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$48,378</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 95/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:95%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (3,210 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0HG3C" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="hogar" data-score="100">
+  <div class="card-rank">#9</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71nEF9OYDQL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#2e7d3220;color:#2e7d32">
+      🏠 Organizadores Hogar
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0HG4D" target="_blank" rel="noopener">Acrylic Makeup Organizer Display Case — Clear Cosmetic Storage for Lipstick Brus</a>
+    <div class="card-meta">
+      <span class="meta-price">$27.99</span>
+      <span class="meta-rating">★★★★½ <small>(145 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$39,186</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0HG4D" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="hogar" data-score="100">
+  <div class="card-rank">#14</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71c3KWVD2DL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#2e7d3220;color:#2e7d32">
+      🏠 Organizadores Hogar
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0HG5E" target="_blank" rel="noopener">Cable Management Box — Cord Organizer Desktop Wire Cover Hider for TV Power Stri</a>
+    <div class="card-meta">
+      <span class="meta-price">$18.99</span>
+      <span class="meta-rating">★★★★ <small>(56 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$16,141</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Tendencias de organización del hogar son virales en TikTok Panamá — el contenido 'antes y después' convierte muy bien.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0HG5E" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="mascotas" data-score="83">
+  <div class="card-rank">#2</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71VZ3A-A82L._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#e6510020;color:#e65100">
+      🐾 Accesorios Mascotas
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0PT1A" target="_blank" rel="noopener">COMSUN Collapsible Dog Bowl Travel Set 4 Pack — Portable Silicone Food Water Bow</a>
+    <div class="card-meta">
+      <span class="meta-price">$13.99</span>
+      <span class="meta-rating">★★★★½ <small>(15,432 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$48,965</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 83/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:83%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (15,432 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0PT1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="mascotas" data-score="93">
+  <div class="card-rank">#4</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71-jOD1XWQL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#e6510020;color:#e65100">
+      🐾 Accesorios Mascotas
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0PT2B" target="_blank" rel="noopener">Cat Calming Collar 3 Pack — Adjustable Breakaway Lavender Pheromone Collar for A</a>
+    <div class="card-meta">
+      <span class="meta-price">$15.99</span>
+      <span class="meta-rating">★★★★ <small>(6,789 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$35,178</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 93/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:93%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (6,789 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0PT2B" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="mascotas" data-score="82">
+  <div class="card-rank">#6</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61OYPKXXDSL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#e6510020;color:#e65100">
+      🐾 Accesorios Mascotas
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0PT3C" target="_blank" rel="noopener">WOPET Automatic Dog Feeder 4L — Programmable Auto Pet Food Dispenser with Voice </a>
+    <div class="card-meta">
+      <span class="meta-price">$55.99</span>
+      <span class="meta-rating">★★★★ <small>(4,312 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$78,386</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 82/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:82%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (4,312 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio elevado ($56). Segmento premium — mercado más reducido pero con mayor margen. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0PT3C" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="mascotas" data-score="98">
+  <div class="card-rank">#10</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71g-0F4JwCL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#e6510020;color:#e65100">
+      🐾 Accesorios Mascotas
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0PT4D" target="_blank" rel="noopener">Dog Poop Bags Extra Thick Leak-Proof — 720 Bags on 48 Rolls Lavender Scented Pet</a>
+    <div class="card-meta">
+      <span class="meta-price">$16.99</span>
+      <span class="meta-rating">★★★★½ <small>(231 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$23,786</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 98/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:98%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0PT4D" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="mascotas" data-score="99">
+  <div class="card-rank">#15</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71nGqF4AOHL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#e6510020;color:#e65100">
+      🐾 Accesorios Mascotas
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0PT5E" target="_blank" rel="noopener">Interactive Cat Toys for Indoor Cats — Self-Rotating Electric Ball Automatic LED</a>
+    <div class="card-meta">
+      <span class="meta-price">$19.99</span>
+      <span class="meta-rating">★★★★ <small>(43 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$16,992</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 99/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:99%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0PT5E" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="fitness" data-score="94">
+  <div class="card-rank">#1</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/81wB28JF+CL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#6a1b9a20;color:#6a1b9a">
+      🏋️ Fitness Accesorios
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0FT1A" target="_blank" rel="noopener">Resistance Bands Set 5 Pack — Heavy Duty Exercise Bands for Men Women Booty Leg </a>
+    <div class="card-meta">
+      <span class="meta-price">$21.99</span>
+      <span class="meta-rating">★★★★½ <small>(31,245 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$131,940</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 94/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:94%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (31,245 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0FT1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="fitness" data-score="94">
+  <div class="card-rank">#3</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71yfFD3ZRWL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#6a1b9a20;color:#6a1b9a">
+      🏋️ Fitness Accesorios
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0FT2B" target="_blank" rel="noopener">Yoga Mat Non Slip 6mm Thick — Eco Friendly Exercise Mat with Carrying Strap for </a>
+    <div class="card-meta">
+      <span class="meta-price">$28.99</span>
+      <span class="meta-rating">★★★★½ <small>(12,098 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$101,465</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 94/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:94%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (12,098 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0FT2B" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="fitness" data-score="92">
+  <div class="card-rank">#5</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71YJb4UF0UL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#6a1b9a20;color:#6a1b9a">
+      🏋️ Fitness Accesorios
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0FT3C" target="_blank" rel="noopener">GRITIN Resistance Bands 150LBS — Non-Slip Fabric Booty Bands Set for Legs Glutes</a>
+    <div class="card-meta">
+      <span class="meta-price">$16.99</span>
+      <span class="meta-rating">★★★★ <small>(5,432 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$37,378</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 92/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:92%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (5,432 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0FT3C" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="fitness" data-score="85">
+  <div class="card-rank">#8</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61lMFAqkWeL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#6a1b9a20;color:#6a1b9a">
+      🏋️ Fitness Accesorios
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0FT4D" target="_blank" rel="noopener">Jump Rope Speed Skipping Rope — Adjustable Steel Cable with Ball Bearings for Cr</a>
+    <div class="card-meta">
+      <span class="meta-price">$12.99</span>
+      <span class="meta-rating">★★★★½ <small>(187 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$18,186</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 85/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:85%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0FT4D" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="fitness" data-score="100">
+  <div class="card-rank">#12</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71-4mJGg6dL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#6a1b9a20;color:#6a1b9a">
+      🏋️ Fitness Accesorios
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0FT5E" target="_blank" rel="noopener">Foam Roller for Muscles — High Density Deep Tissue Massage Roller 13 inch for Ba</a>
+    <div class="card-meta">
+      <span class="meta-price">$24.99</span>
+      <span class="meta-rating">★★★★½ <small>(62 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$21,242</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 100/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0FT5E" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="bebe" data-score="87">
+  <div class="card-rank">#2</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71jN0hSYoQL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#00838f20;color:#00838f">
+      👶 Accesorios Bebé
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0BB1A" target="_blank" rel="noopener">Silicone Baby Feeding Set 6 Piece — BPA Free Suction Plate Bowl Fork Spoon Bib f</a>
+    <div class="card-meta">
+      <span class="meta-price">$24.99</span>
+      <span class="meta-rating">★★★★½ <small>(9,871 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$87,465</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 87/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:87%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (9,871 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0BB1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="bebe" data-score="83">
+  <div class="card-rank">#5</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61-5jVPxv2L._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#00838f20;color:#00838f">
+      👶 Accesorios Bebé
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0BB2B" target="_blank" rel="noopener">Baby Sound Machine White Noise — 31 Soothing Sounds Nightlight Portable Sleep Tr</a>
+    <div class="card-meta">
+      <span class="meta-price">$39.99</span>
+      <span class="meta-rating">★★★★½ <small>(6,234 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~2,200 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$87,978</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 83/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:83%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (6,234 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio medio, requiere buena presentación y construir confianza de marca desde el inicio. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0BB2B" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="bebe" data-score="84">
+  <div class="card-rank">#8</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61B4kIgAVpL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#00838f20;color:#00838f">
+      👶 Accesorios Bebé
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0BB3C" target="_blank" rel="noopener">Mushroom Night Light for Kids — Color Changing Silicone Nursery Lamp with Remote</a>
+    <div class="card-meta">
+      <span class="meta-price">$18.99</span>
+      <span class="meta-rating">★★★★½ <small>(3,456 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$26,586</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 84/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:84%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (3,456 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0BB3C" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="bebe" data-score="88">
+  <div class="card-rank">#13</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61w1yqKNVcL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#00838f20;color:#00838f">
+      👶 Accesorios Bebé
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0BB4D" target="_blank" rel="noopener">Baby Nail File Electric Trimmer — 6-in-1 Safe Nail Grinder Kit for Newborn Toddl</a>
+    <div class="card-meta">
+      <span class="meta-price">$16.99</span>
+      <span class="meta-rating">★★★★ <small>(201 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$14,441</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 88/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:88%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0BB4D" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="bebe" data-score="91">
+  <div class="card-rank">#18</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71K9QDBTYML._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#00838f20;color:#00838f">
+      👶 Accesorios Bebé
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0BB5E" target="_blank" rel="noopener">Portable Diaper Changing Pad Waterproof — Foldable Travel Mat with Storage Pocke</a>
+    <div class="card-meta">
+      <span class="meta-price">$22.99</span>
+      <span class="meta-rating">★★★★½ <small>(34 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$19,542</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#2e7d32">🟢 91/100 — ALTO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:91%;background:#2e7d32"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0BB5E" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="tech" data-score="78">
+  <div class="card-rank">#1</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/41TxqPz9XVL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#37474f20;color:#37474f">
+      📱 Tech Lifestyle
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0TL1A" target="_blank" rel="noopener">Anker 65W USB C Charger — 3-Port Compact GaN Foldable Wall Charger for MacBook i</a>
+    <div class="card-meta">
+      <span class="meta-price">$35.99</span>
+      <span class="meta-rating">★★★★½ <small>(28,654 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~6,000 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$215,940</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 78/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:78%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (28,654 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio medio, requiere buena presentación y construir confianza de marca desde el inicio. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0TL1A" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="tech" data-score="70">
+  <div class="card-rank">#3</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/612AUHXH5HL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#37474f20;color:#37474f">
+      📱 Tech Lifestyle
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0TL2B" target="_blank" rel="noopener">MagSafe Compatible Phone Stand Ring Holder — 360° Rotation Adjustable Kickstand </a>
+    <div class="card-meta">
+      <span class="meta-price">$14.99</span>
+      <span class="meta-rating">★★★★½ <small>(11,234 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~3,500 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$52,465</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 70/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:70%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (11,234 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0TL2B" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="tech" data-score="77">
+  <div class="card-rank">#6</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/61U0RFT-xPL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#37474f20;color:#37474f">
+      📱 Tech Lifestyle
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0TL3C" target="_blank" rel="noopener">PopSockets Phone Grip with MagSafe — Swappable PopGrip Magnetic Stand for iPhone</a>
+    <div class="card-meta">
+      <span class="meta-price">$24.99</span>
+      <span class="meta-rating">★★★★ <small>(7,832 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$34,986</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 77/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:77%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (7,832 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0TL3C" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="tech" data-score="71">
+  <div class="card-rank">#9</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71k9J6NQKGL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#37474f20;color:#37474f">
+      📱 Tech Lifestyle
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0TL4D" target="_blank" rel="noopener">Magnetic Cable Organizer Clips — 6 Pack Desktop Cord Management for USB HDMI Cha</a>
+    <div class="card-meta">
+      <span class="meta-price">$11.99</span>
+      <span class="meta-rating">★★★★ <small>(423 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~1,400 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$16,786</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 71/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:71%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Competencia media en USA. En Panamá hay espacio para posicionarse con buen branding local. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0TL4D" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+<div class="product-card" data-category="tech" data-score="76">
+  <div class="card-rank">#14</div>
+  <div class="card-image-wrap">
+    <img class="card-image" src="https://m.media-amazon.com/images/I/71Lv+PJCVDL._AC_SL1500_.jpg" alt="product" loading="lazy">
+  </div>
+  <div class="card-body">
+    <div class="card-cat-badge" style="background:#37474f20;color:#37474f">
+      📱 Tech Lifestyle
+    </div>
+    <a class="card-title" href="https://www.amazon.com/dp/B0TL5E" target="_blank" rel="noopener">Screen Cleaning Kit 3-in-1 — Microfiber Cloth Spray Sticker for MacBook iPad iPh</a>
+    <div class="card-meta">
+      <span class="meta-price">$9.99</span>
+      <span class="meta-rating">★★★★½ <small>(67 reseñas)</small></span>
+    </div>
+
+    <div class="sales-highlight">
+      <div class="sales-item">
+        <div class="sales-label">📈 Ventas est./mes (BSR)</div>
+        <div class="sales-value">~850 uds</div>
+      </div>
+      <div class="sales-divider"></div>
+      <div class="sales-item">
+        <div class="sales-label">💵 Revenue est./mes</div>
+        <div class="sales-value">$8,492</div>
+      </div>
+    </div>
+
+    <div class="panama-section">
+      <div class="panama-header">
+        <span>🇵🇦 Potencial Panamá</span>
+        <span class="panama-score" style="color:#e65100">🟡 76/100 — MEDIO</span>
+      </div>
+      <div class="score-bar-wrap"><div class="score-bar-fill" style="width:76%;background:#e65100"></div></div>
+      <div class="panama-description">
+        <span class="desc-icon">💡</span>
+        <span class="desc-text">Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales.</span>
+      </div>
+    </div>
+    <a class="view-btn" href="https://www.amazon.com/dp/B0TL5E" target="_blank" rel="noopener">Ver en Amazon →</a>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+  Generado automáticamente · Amazon USA Best Sellers · Friday 12 Jun 2026
+</div>
+
+<script>
+  function filterCat(btn, cat) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('#products-grid .product-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
