@@ -1,0 +1,1813 @@
+{
+  "belleza": [],
+  "viaje": [],
+  "hogar": [],
+  "mascotas": [
+    {
+      "rank": 1,
+      "asin": "B0009X29WK",
+      "title": "Dr. Elsey's Ultra UnScented Clumping Clay Cat Litter 40 lb. Bag",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71gV7T7iW-L._AC_UL300_SR300,200_.jpg",
+      "price": "$22.99",
+      "rating": 4.3,
+      "reviews": 95537,
+      "url": "https://www.amazon.com/Dr-Elseys-Premium-Clumping-Litter/dp/B0009X29WK/ref=zg_bs_g_pet-supplies_d_sccl_1/135-4421783-7936750",
+      "monthly_sales_est": 6000,
+      "panama": {
+        "score": 93,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (95,537 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 2,
+      "asin": "B005OB3E30",
+      "title": "Purina Fancy Feast Gravy Lovers Poultry and Beef Grilled Gourmet Wet Cat Food Variety Pack - (Pack of 24) 3 oz. Cans",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81lQH8GEM1L._AC_UL300_SR300,200_.jpg",
+      "price": "$22.86",
+      "rating": 4.7,
+      "reviews": 54707,
+      "url": "https://www.amazon.com/Purina-Fancy-Feast-Poultry-Collection/dp/B005OB3E30/ref=zg_bs_g_pet-supplies_d_sccl_2/135-4421783-7936750",
+      "monthly_sales_est": 3500,
+      "panama": {
+        "score": 95,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (54,707 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 3,
+      "asin": "B00MW8G62E",
+      "title": "Amazon Basics Leak-Proof Dog and Puppy Potty Training Pee Pads with Quick-Dry 5-Layer Super Absorbent Design, Regular Si",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71LHksRF15L._AC_UL300_SR300,200_.jpg",
+      "price": "$18.88",
+      "rating": 4.5,
+      "reviews": 221492,
+      "url": "https://www.amazon.com/Amazon-Basics-Leak-Proof-Quick-Dry-Absorbency/dp/B00MW8G62E/ref=zg_bs_g_pet-supplies_d_sccl_3/135-4421783-7936750",
+      "monthly_sales_est": 3500,
+      "panama": {
+        "score": 95,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (221,492 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 4,
+      "asin": "B00BSYR7K8",
+      "title": "Earth Rated Poop Bags for Dogs, Guaranteed Leak Proof and Extra Thick Waste Bag Refill Rolls, Lavender Scented, 270 Bags",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71l4DqotI3L._AC_UL300_SR300,200_.jpg",
+      "price": "$14.99",
+      "rating": 4.8,
+      "reviews": 247526,
+      "url": "https://www.amazon.com/Earth-Rated-Lavender-Scented-Completely/dp/B00BSYR7K8/ref=zg_bs_g_pet-supplies_d_sccl_4/135-4421783-7936750",
+      "monthly_sales_est": 2200,
+      "panama": {
+        "score": 83,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (247,526 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 5,
+      "asin": "B07S2TDDCK",
+      "title": "Greenies Pill Pockets for Dogs Large Size, Dog Treat Pouch for Capsule Medication, Peanut Butter Flavor, 15.8 oz. Pouch",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71CpIliNxhL._AC_UL300_SR300,200_.jpg",
+      "price": "$17.89",
+      "rating": 4.8,
+      "reviews": 33006,
+      "url": "https://www.amazon.com/Greenies-Pockets-Natural-Treats-Capsule/dp/B07S2TDDCK/ref=zg_bs_g_pet-supplies_d_sccl_5/135-4421783-7936750",
+      "monthly_sales_est": 2200,
+      "panama": {
+        "score": 95,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (33,006 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 6,
+      "asin": "B000VDR8LA",
+      "title": "Fresh Step Odor Shield Multi Cat Clumping Cat Litter with Febreze Freshness, Low Dust, Odor Control with Ammonia Block T",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81iLZ4cQoUL._AC_UL300_SR300,200_.jpg",
+      "price": "",
+      "rating": 4.6,
+      "reviews": 140807,
+      "url": "https://www.amazon.com/Fresh-Step-Multi-Cat-Febreze-Shield/dp/B000VDR8LA/ref=zg_bs_g_pet-supplies_d_sccl_6/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 80,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (140,807 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 7,
+      "asin": "B07D323MFZ",
+      "title": "INABA Churu Cat Treats, Lickable, Squeezable Creamy Purée Cat Treat with Green Tea Extract & Taurine, 0.5 Ounces Each Tu",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71B8D1hWW4L._AC_UL300_SR300,200_.jpg",
+      "price": "$32.96",
+      "rating": 4.9,
+      "reviews": 13183,
+      "url": "https://www.amazon.com/INABA-Chicken-Lickable-Creamy-Variety/dp/B07D323MFZ/ref=zg_bs_g_pet-supplies_d_sccl_7/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 92,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (13,183 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 8,
+      "asin": "B07NHL31CC",
+      "title": "Earth Rated Pet Wipes for Dogs and Cats, Hypoallergenic, 3-in-1 Cleaning, Deodorizing and Hydrating, for Grooming Paws, ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71f0WMXb8bL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.98",
+      "rating": 4.6,
+      "reviews": 33502,
+      "url": "https://www.amazon.com/Earth-Rated-USDA-Certified-Hypoallergenic/dp/B07NHL31CC/ref=zg_bs_g_pet-supplies_d_sccl_8/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 80,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (33,502 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 9,
+      "asin": "B09K8YYVWV",
+      "title": "Blue Buffalo Life Protection Formula Chicken & Brown Rice Adult Dry Dog Food, Supports Immunity with Antioxidant-Rich Li",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81x68cxW9UL._AC_UL300_SR300,200_.jpg",
+      "price": "$14.97",
+      "rating": 4.7,
+      "reviews": 29190,
+      "url": "https://www.amazon.com/Blue-Buffalo-Protection-Formula-Natural/dp/B09K8YYVWV/ref=zg_bs_g_pet-supplies_d_sccl_9/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 80,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (29,190 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 10,
+      "asin": "B001650NNW",
+      "title": "Purina Pro Plan Veterinary Supplements FortiFlora Daily Probiotics for Dogs, Helps Digestive Gut Health and Diarrhea - 3",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71l8QTg+aoL._AC_UL300_SR300,200_.jpg",
+      "price": "$30.99",
+      "rating": 4.7,
+      "reviews": 48652,
+      "url": "https://www.amazon.com/Purina-Veterinary-Fortiflora-Nutritional-Supplement/dp/B001650NNW/ref=zg_bs_g_pet-supplies_d_sccl_10/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 92,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (48,652 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 11,
+      "asin": "B072DTFZHL",
+      "title": "Sheba Perfect Portions Wet Cat Food Cuts in Gravy, Cat Food Wet Recipe, Roasted Chicken Entree, with Sustainable Salmon,",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81wMxPo0TlL._AC_UL300_SR300,200_.jpg",
+      "price": "$23.38",
+      "rating": 4.7,
+      "reviews": 20751,
+      "url": "https://www.amazon.com/Sheba-Portions-Wet-Food-Twin-Pack/dp/B072DTFZHL/ref=zg_bs_g_pet-supplies_d_sccl_11/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 92,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (20,751 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 12,
+      "asin": "B08P2D95G8",
+      "title": "Pur Luv Chicken Jerky Dog Treats, Made with 100% Real Chicken Breast, 16 Ounces, Healthy, Easily Digestible, Long-Lastin",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81fgNCXCZYL._AC_UL300_SR300,200_.jpg",
+      "price": "$14.09",
+      "rating": 4.6,
+      "reviews": 12684,
+      "url": "https://www.amazon.com/Pur-Luv-Chicken-Jerky-Treats/dp/B08P2D95G8/ref=zg_bs_g_pet-supplies_d_sccl_12/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 80,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (12,684 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 13,
+      "asin": "B07C22NTL4",
+      "title": "HONEY CARE All-Absorb A26 Male Dog Wrap, 50 Count, Small",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81SdWJWy--L._AC_UL300_SR300,200_.jpg",
+      "price": "$17.97",
+      "rating": 4.6,
+      "reviews": 49959,
+      "url": "https://www.amazon.com/All-Absorb-Male-Dog-Wrap-Count/dp/B07C22NTL4/ref=zg_bs_g_pet-supplies_d_sccl_13/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 92,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (49,959 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 14,
+      "asin": "B00NABTC8M",
+      "title": "Amazon Basics Dog Poop Leak Proof Bags with Dispenser and Leash Clip, Unscented, 13\" x 9\" Large Size, 300 Count",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71RhBxKwOWL._AC_UL300_SR300,200_.jpg",
+      "price": "$10.98",
+      "rating": 4.8,
+      "reviews": 239738,
+      "url": "https://www.amazon.com/AmazonBasics-Waste-Bags-Dispenser-Leash/dp/B00NABTC8M/ref=zg_bs_g_pet-supplies_d_sccl_14/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 80,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (239,738 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 15,
+      "asin": "B000I82DTU",
+      "title": "Milk-Bone Original Dog Treats Biscuits for Medium Dogs, 10 Pound",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81IfJLJtCDL._AC_UL300_SR300,200_.jpg",
+      "price": "$14.98",
+      "rating": 4.8,
+      "reviews": 80755,
+      "url": "https://www.amazon.com/Milk-Bone-Original-Treats-Medium-10-Pound/dp/B000I82DTU/ref=zg_bs_g_pet-supplies_d_sccl_15/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 80,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (80,755 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 16,
+      "asin": "B01LNB6SA0",
+      "title": "Temptations Cat Treats Classic Crunchy and Soft Cat Treats, Tasty Chicken Flavor, 30 oz. Tub",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/8108Aln7zcL._AC_UL300_SR300,200_.jpg",
+      "price": "$15.48",
+      "rating": 4.8,
+      "reviews": 71894,
+      "url": "https://www.amazon.com/Temptations-Treats-Chicken-Flavor-Holiday/dp/B01LNB6SA0/ref=zg_bs_g_pet-supplies_d_sccl_16/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (71,894 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 17,
+      "asin": "B003P9XG68",
+      "title": "Blue Buffalo Health Bars Pumpkin & Cinnamon Crunchy Dog Biscuits, Oven-Baked with Pumpkin & Natural Ingredients, Healthy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81sjz5sTMoL._AC_UL300_SR300,200_.jpg",
+      "price": "$4.98",
+      "rating": 4.7,
+      "reviews": 9409,
+      "url": "https://www.amazon.com/Blue-Buffalo-Natural-Biscuits-Cinnamon/dp/B003P9XG68/ref=zg_bs_g_pet-supplies_d_sccl_17/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 78,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (9,409 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 18,
+      "asin": "B00CU2CMOI",
+      "title": "Pedigree Dentastix Large Dog Treats, Original, Beef & Fresh, 2.73 lb. Variety Pack (51 Treats Total)",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81jnJugwU3L._AC_UL300_SR300,200_.jpg",
+      "price": "$23.98",
+      "rating": 4.8,
+      "reviews": 22004,
+      "url": "https://www.amazon.com/PEDIGREE-DENTASTIX-Original-Variety-lb-Pack/dp/B00CU2CMOI/ref=zg_bs_g_pet-supplies_d_sccl_18/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (22,004 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 19,
+      "asin": "B089LLHMQL",
+      "title": "ARM & HAMMER Clump & Seal SLIDE Platinum Multi-Cat Clumping Cat Litter, Easy Clean Technology with No Scrubbing, 14-Day ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81RyTDvi2BL._AC_UL300_SR300,200_.jpg",
+      "price": "$17.99",
+      "rating": 4.6,
+      "reviews": 18908,
+      "url": "https://www.amazon.com/Arm-Hammer-Platinum-Clean-Up-Multi-Cat/dp/B089LLHMQL/ref=zg_bs_g_pet-supplies_d_sccl_19/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (18,908 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 20,
+      "asin": "B006HKA6II",
+      "title": "Milk-Bone Soft & Chewy Dog Treats, Made with Real Beef & Filet Mignon, 25 Ounce Canister",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/818pAbvAZbL._AC_UL300_SR300,200_.jpg",
+      "price": "$14.47",
+      "rating": 4.7,
+      "reviews": 34479,
+      "url": "https://www.amazon.com/Milk-Bone-Mignon-Recipe-Treats-25-Ounce/dp/B006HKA6II/ref=zg_bs_g_pet-supplies_d_sccl_20/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 78,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (34,479 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 21,
+      "asin": "B001STX13U",
+      "title": "Purina Fancy Feast Grilled Wet Cat Food Seafood Collection in Wet Cat Food Variety Pack - (Pack of 24) 3 oz. Cans",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81K7YvcfLpL._AC_UL300_SR300,200_.jpg",
+      "price": "$22.86",
+      "rating": 4.7,
+      "reviews": 46901,
+      "url": "https://www.amazon.com/Purina-Fancy-Feast-Grilled-Collection/dp/B001STX13U/ref=zg_bs_g_pet-supplies_d_sccl_21/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (46,901 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 22,
+      "asin": "B003ULL1NQ",
+      "title": "Nutramax Cosequin for Dogs Joint Health Supplement, Contains Glucosamine for Dogs, Plus Chondroitin and MSM, Supports He",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71Ose24LM2L._AC_UL300_SR300,200_.jpg",
+      "price": "$34.91",
+      "rating": 4.7,
+      "reviews": 78844,
+      "url": "https://www.amazon.com/Cosequin-DS-Maximum-Strength-Chewable/dp/B003ULL1NQ/ref=zg_bs_g_pet-supplies_d_sccl_22/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (78,844 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 23,
+      "asin": "B0CCLPZG4B",
+      "title": "Minties Dental Chews for Dogs, 60 Count, Vet-Recommended Mint-Flavored Dental Dog Treats for Medium Dogs, Bones Clean Te",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71jX6A87RvL._AC_UL300_SR300,200_.jpg",
+      "price": "$26.39",
+      "rating": 4.5,
+      "reviews": 36296,
+      "url": "https://www.amazon.com/Minties-Dental-Vet-Recommended-Mint-Flavored-Removes/dp/B0CCLPZG4B/ref=zg_bs_g_pet-supplies_d_sccl_23/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (36,296 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 24,
+      "asin": "B01N0BZQQO",
+      "title": "PetArmor Plus Flea and Tick Prevention for Cats over 1.5 lbs, Cat Flea and Tick Treatment, 6 Doses, Waterproof Topical, ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71fMs-6cH1L._AC_UL300_SR300,200_.jpg",
+      "price": "$39.99",
+      "rating": 4.2,
+      "reviews": 60841,
+      "url": "https://www.amazon.com/PetArmor-Prevention-Waterproof-Fast-Acting-Medication/dp/B01N0BZQQO/ref=zg_bs_g_pet-supplies_d_sccl_24/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 84,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (60,841 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio medio, requiere buena presentación y construir confianza de marca desde el inicio. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 25,
+      "asin": "B0BWBNT8JX",
+      "title": "Vital Essentials Freeze Dried Dog Treats | Beef Liver, Single Ingredient | Premium Quality | Grain Free Training Treats ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81wH90GjR1L._AC_UL300_SR300,200_.jpg",
+      "price": "$5.99",
+      "rating": 4.6,
+      "reviews": 7415,
+      "url": "https://www.amazon.com/Vital-Essentials-Freeze-Dried-Treats/dp/B0BWBNT8JX/ref=zg_bs_g_pet-supplies_d_sccl_25/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 78,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (7,415 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 26,
+      "asin": "B006W6YHYQ",
+      "title": "Greenies Veterinarian-Recommended Adult Natural Dental Dog Treats Teenie Size, Dog Dental Chews, Original Flavor, 36 oz.",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71K5qkEYITL._AC_UL300_SR300,200_.jpg",
+      "price": "$26.63",
+      "rating": 4.8,
+      "reviews": 70596,
+      "url": "https://www.amazon.com/Greenies-Original-Teenie-Dental-Holiday/dp/B006W6YHYQ/ref=zg_bs_g_pet-supplies_d_sccl_26/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (70,596 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 27,
+      "asin": "B07GL8SLKY",
+      "title": "ARM & HAMMER Clump & Seal SLIDE Platinum Multi-Cat Clumping Cat Litter, Easy Clean Technology with No Scrubbing, 14-Day ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71zlM2HWO0L._AC_UL300_SR300,200_.jpg",
+      "price": "$34.99",
+      "rating": 4.6,
+      "reviews": 19738,
+      "url": "https://www.amazon.com/Arm-Hammer-Platinum-Clean-Up-Multi-Cat/dp/B07GL8SLKY/ref=zg_bs_g_pet-supplies_d_sccl_27/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (19,738 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 28,
+      "asin": "B07BVL8TQF",
+      "title": "Good 'n' Fun Kabobs Long-Lasting Dog Treat, With Real Proteins, Beef Hide and Premium Chicken, Supports Dental Health, M",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/815X9Vp4lVL._AC_UL300_SR300,200_.jpg",
+      "price": "$17.84",
+      "rating": 4.7,
+      "reviews": 59036,
+      "url": "https://www.amazon.com/Long-Lasting-Proteins-Premium-Supports-Stimulation/dp/B07BVL8TQF/ref=zg_bs_g_pet-supplies_d_sccl_28/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (59,036 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 29,
+      "asin": "B007JXVR76",
+      "title": "Meow Mix Original Choice Dry Cat Food, 6.3 Pound Bag",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81fR3aorQGL._AC_UL300_SR300,200_.jpg",
+      "price": "$8.99",
+      "rating": 4.7,
+      "reviews": 51789,
+      "url": "https://www.amazon.com/Meow-Mix-Original-Dry-Food/dp/B007JXVR76/ref=zg_bs_g_pet-supplies_d_sccl_29/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 78,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (51,789 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    },
+    {
+      "rank": 30,
+      "asin": "B003PMQMK2",
+      "title": "Milk-Bone MaroSnacks Small Dog Treats with Real Bone Marrow, 40 Oz. Canister",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81xXOlvM-RL._AC_UL300_SR300,200_.jpg",
+      "price": "MSRPClick for details",
+      "rating": 4.7,
+      "reviews": 83820,
+      "url": "https://www.amazon.com/Milk-Bone-Marosnacks-Treats-Sizes-40-Ounce/dp/B003PMQMK2/ref=zg_bs_g_pet-supplies_d_sccl_30/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 78,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Mercado emocional: los dueños no escatiman. Recompra alta.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (83,820 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. El mercado de mascotas en Panamá crece aceleradamente. Los dueños panameños no escatiman en gastos para sus animales."
+      }
+    }
+  ],
+  "fitness": [
+    {
+      "rank": 1,
+      "asin": "B01LR5RG08",
+      "title": "Amazon Basics Neoprene Dumbbell Hand Weights for Exercise and Muscle Toning",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61UEXxKIlrL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.81",
+      "rating": 4.8,
+      "reviews": 127285,
+      "url": "https://www.amazon.com/AmazonBasics-Pound-Neoprene-Dumbbells-Weights/dp/B01LR5RG08/ref=zg_bs_g_3407731_d_sccl_1/135-4421783-7936750",
+      "monthly_sales_est": 6000,
+      "panama": {
+        "score": 82,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (127,285 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 2,
+      "asin": "B09MKNL9M3",
+      "title": "BMJL Women's Athletic Shorts High Waisted Running Short Pocket 2.5\" Sporty Shorts Gym Workout Shorts",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/710JBjr8xAL._AC_UL300_SR300,200_.jpg",
+      "price": "$19.99",
+      "rating": 4.4,
+      "reviews": 12664,
+      "url": "https://www.amazon.com/BMJL-Athletic-Waisted-Running-Elastic/dp/B09MKNL9M3/ref=zg_bs_g_3407731_d_sccl_2/135-4421783-7936750",
+      "monthly_sales_est": 3500,
+      "panama": {
+        "score": 92,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (12,664 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 3,
+      "asin": "B0C69C89BX",
+      "title": "ANRABESS Women Athletic Dress Summer Tennis Workout Active Sports Mini Romper Dress Built in Shorts Travel Vacation Clot",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61Fl1uveSGL._AC_UL300_SR300,200_.jpg",
+      "price": "$23.99",
+      "rating": 4.3,
+      "reviews": 5355,
+      "url": "https://www.amazon.com/ANRABESS-Workout-Spaghetti-Underneath-1125heise-M/dp/B0C69C89BX/ref=zg_bs_g_3407731_d_sccl_3/135-4421783-7936750",
+      "monthly_sales_est": 3500,
+      "panama": {
+        "score": 92,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (5,355 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 4,
+      "asin": "B01GH5GSLG",
+      "title": "Under Armour Men's Tech Golf Polo",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71EV1E1ohQL._AC_UL300_SR300,200_.jpg",
+      "price": "$23.99",
+      "rating": 4.7,
+      "reviews": 59844,
+      "url": "https://www.amazon.com/Under-Armour-White-Graphite-Large/dp/B01GH5GSLG/ref=zg_bs_g_3407731_d_sccl_4/135-4421783-7936750",
+      "monthly_sales_est": 2200,
+      "panama": {
+        "score": 94,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (59,844 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 5,
+      "asin": "B00JUM4CT4",
+      "title": "Hanes Men's Zip-up Hoodie, Ecosmart Fleece Full-zip Hoodie for Men, Hooded Sweatshirt",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71QyRZzbaUL._AC_UL300_SR300,200_.jpg",
+      "price": "$12.50",
+      "rating": 4.6,
+      "reviews": 87802,
+      "url": "https://www.amazon.com/Hanes-Full-zip-Eco-smart-athletic-sweatshirts/dp/B00JUM4CT4/ref=zg_bs_g_3407731_d_sccl_5/135-4421783-7936750",
+      "monthly_sales_est": 2200,
+      "panama": {
+        "score": 82,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (87,802 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 6,
+      "asin": "B0DSVVNY1H",
+      "title": "Ksmien Women's 5\"/ 7\" Athletic Running Shorts Quick Dry Lightweight Workout Gym Shorts with Zipper Pockets UPF 50+",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71sQ8Z6ipLL._AC_UL300_SR300,200_.jpg",
+      "price": "$24.99",
+      "rating": 4.5,
+      "reviews": 1782,
+      "url": "https://www.amazon.com/Ksmien-Athletic-Running-Lightweight-Workout/dp/B0DSVVNY1H/ref=zg_bs_g_3407731_d_sccl_6/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 94,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Mercado validado con competencia moderada. Diferenciación en diseño o packaging puede marcar la diferencia. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 7,
+      "asin": "B0C2JMJKSL",
+      "title": "ROXUN Arm Sleeves, Cooling UV Sun Protection Sports Compression for Men/Women",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/610ss62cTJL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.5,
+      "reviews": 12211,
+      "url": "https://www.amazon.com/ROXUN-Sleeves-Cooling-Protection-Compression/dp/B0C2JMJKSL/ref=zg_bs_g_3407731_d_sccl_7/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 79,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (12,211 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 8,
+      "asin": "B09P3RHNSY",
+      "title": "NORTHYARD Men's Athletic Running Shorts Gym Workout 7\"/9\"/5\" Quick Dry Lightweight Sports Basketball Tennis 3 Zipper Poc",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61JawYXdZyL._AC_UL300_SR300,200_.jpg",
+      "price": "$24.99",
+      "rating": 4.6,
+      "reviews": 10426,
+      "url": "https://www.amazon.com/NORTHYARD-Athletic-Lightweight-Basketball-Training/dp/B09P3RHNSY/ref=zg_bs_g_3407731_d_sccl_8/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 91,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (10,426 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 9,
+      "asin": "B0FG7WXNP3",
+      "title": "Zeerun Weighted Vest, 6lb/8lb/10lb/12lb/15lb/18lb/20lb/24lb/30lb for Men Women, Reflective Stripe Adjustable Buckle, Com",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81zh-RIi18L._AC_UL300_SR300,200_.jpg",
+      "price": "$16.99",
+      "rating": 4.6,
+      "reviews": 2145,
+      "url": "https://www.amazon.com/Zeerun-Reflective-Adjustable-Comfortable-10LBS-Black/dp/B0FG7WXNP3/ref=zg_bs_g_3407731_d_sccl_9/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 91,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (2,145 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 10,
+      "asin": "B0DNMJ694B",
+      "title": "Leafigure 2 Pack Womens Biker Shorts with Pockets, High Waisted Tummy Control Yoga Shorts for Women Running Gym and Work",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71dIYgaX09L._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.5,
+      "reviews": 5758,
+      "url": "https://www.amazon.com/Leafigure-Pockets-6-Waisted-Control-Running/dp/B0DNMJ694B/ref=zg_bs_g_3407731_d_sccl_10/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 79,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (5,758 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 11,
+      "asin": "B07VWT4XRG",
+      "title": "FITRELL 3 Pairs Compression Socks for Women and Men 20-30mmHg-Circulation Support Socks",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71CUmyhYe2L._AC_UL300_SR300,200_.jpg",
+      "price": "$14.99",
+      "rating": 4.5,
+      "reviews": 38199,
+      "url": "https://www.amazon.com/Compression-20-30mmHg-Support-Running-Medical/dp/B07VWT4XRG/ref=zg_bs_g_3407731_d_sccl_11/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 79,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (38,199 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 12,
+      "asin": "B089VTK3BR",
+      "title": "Lapulas Athletic Running Ankle Socks, Low Cut Cushioned Anti-Blister Tab Sports Socks Men Women 6Pairs",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81ICu0R5heL._AC_UL300_SR300,200_.jpg",
+      "price": "$14.99",
+      "rating": 4.6,
+      "reviews": 11832,
+      "url": "https://www.amazon.com/Lapulas-Athletic-Cushioned-Running-Sports/dp/B089VTK3BR/ref=zg_bs_g_3407731_d_sccl_12/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 79,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (11,832 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 13,
+      "asin": "B0785VXRX2",
+      "title": "Under Armour Men's Tech 2.0 Short-Sleeve T-Shirt",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41+4pHkfssL._AC_UL300_SR300,200_.jpg",
+      "price": "$17.81",
+      "rating": 4.6,
+      "reviews": 103997,
+      "url": "https://www.amazon.com/Under-Armour-Sleeve-T-Shirt-Graphite/dp/B0785VXRX2/ref=zg_bs_g_3407731_d_sccl_13/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 91,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (103,997 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 14,
+      "asin": "B07518RBH2",
+      "title": "ZELUS Weighted Vest, 6lb/8lb/12lb/16lb/20lb/25lb/30lb Weight Vest with Reflective Stripe for Workout, Strength Training,",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81l7AwlRcDL._AC_UL300_SR300,200_.jpg",
+      "price": "$28.97",
+      "rating": 4.6,
+      "reviews": 16214,
+      "url": "https://www.amazon.com/ZELUS-Weighted-Reflective-Strength-Weightlifting/dp/B07518RBH2/ref=zg_bs_g_3407731_d_sccl_14/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 91,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (16,214 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 15,
+      "asin": "B08JGBB9N1",
+      "title": "BALENNZ Athletic Shorts for Men with Pockets and Elastic Waistband Quick Dry Activewear",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61PZ3tbQ+eL._AC_UL300_SR300,200_.jpg",
+      "price": "$24.99",
+      "rating": 4.6,
+      "reviews": 32335,
+      "url": "https://www.amazon.com/BALENNZ-Athletic-Pockets-Waistband-Activewear/dp/B08JGBB9N1/ref=zg_bs_g_3407731_d_sccl_15/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 91,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (32,335 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 16,
+      "asin": "B0FG298Z4H",
+      "title": "YEOREO Ease Workout Leggings Womens No Front Seam Straight Leggings 29\"/ 31.5\"/ 33\"/ 35\" High Waist Buttery Eddiy Yoga P",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51ALuls6oZL._AC_UL300_SR300,200_.jpg",
+      "price": "$29.99",
+      "rating": 4.3,
+      "reviews": 2702,
+      "url": "https://www.amazon.com/YEOREO-Workout-Leggings-Straight-Buttery/dp/B0FG298Z4H/ref=zg_bs_g_3407731_d_sccl_16/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 87,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (2,702 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 17,
+      "asin": "B07B3VQ8DY",
+      "title": "New Balance Men's 608 V5 Casual Comfort Cross Trainer",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61p6oqRqYQL._AC_UL300_SR300,200_.jpg",
+      "price": "$54.60",
+      "rating": 4.6,
+      "reviews": 90199,
+      "url": "https://www.amazon.com/New-Balance-Casual-Comfort-Trainer/dp/B07B3VQ8DY/ref=zg_bs_g_3407731_d_sccl_17/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 85,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (90,199 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio medio, requiere buena presentación y construir confianza de marca desde el inicio. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 18,
+      "asin": "B0D5Y9N5YH",
+      "title": "Women's Workout Tops Racerback Athletic Tank Tops Sleeveless Loose Fit Yoga Running Gym Shirts for Women",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71K3nspF-eL._AC_UL300_SR300,200_.jpg",
+      "price": "$14.99",
+      "rating": 4.5,
+      "reviews": 1572,
+      "url": "https://www.amazon.com/Workout-Racerback-Athletic-Sleeveless-Running/dp/B0D5Y9N5YH/ref=zg_bs_g_3407731_d_sccl_18/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 80,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Mercado validado con competencia moderada. Diferenciación en diseño o packaging puede marcar la diferencia. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 19,
+      "asin": "B0C7ZBNWL5",
+      "title": "G4Free EverGoing Yoga Pants Women Wide Leg Pants with Pockets High Waist Stretch Dress Casual Sweatpants Petite/Regular/",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51FbAdOJGaL._AC_UL300_SR300,200_.jpg",
+      "price": "$36.99",
+      "rating": 4.4,
+      "reviews": 5934,
+      "url": "https://www.amazon.com/G4Free-Straight-Sweatpants-Stretch-Business/dp/B0C7ZBNWL5/ref=zg_bs_g_3407731_d_sccl_19/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 83,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (5,934 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio medio, requiere buena presentación y construir confianza de marca desde el inicio. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 20,
+      "asin": "B0G49W3RPS",
+      "title": "Nike Crew Socks (6 Pair)",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/518U4k51zvL._AC_UL300_SR300,200_.jpg",
+      "price": "$29.43",
+      "rating": 4.7,
+      "reviews": 533,
+      "url": "https://www.amazon.com/Nike-Socks-Alpha-Regular-Dri-Fit/dp/B0G49W3RPS/ref=zg_bs_g_3407731_d_sccl_20/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 92,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Mercado validado con competencia moderada. Diferenciación en diseño o packaging puede marcar la diferencia. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 21,
+      "asin": "B0DSPV7TF1",
+      "title": "DLOODA Womens Skort Tennis Skirt with Pocket Shorts Mini Golf Skirts High Waisted Athletic Skorts Summer Workout",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/6163g3nmK0L._AC_UL300_SR300,200_.jpg",
+      "price": "$14.99",
+      "rating": 4.6,
+      "reviews": 1810,
+      "url": "https://www.amazon.com/DLOODA-Womens-Waisted-Athletic-Workout/dp/B0DSPV7TF1/ref=zg_bs_g_3407731_d_sccl_21/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 80,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Mercado validado con competencia moderada. Diferenciación en diseño o packaging puede marcar la diferencia. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 22,
+      "asin": "B0CSDK2C3P",
+      "title": "Women's Sun Shirts UPF 50+ Long Sleeve UV Protection Shirt Lightweight Quick Dry Workout Hiking Tops for Women",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61fBESwIEHL._AC_UL300_SR300,200_.jpg",
+      "price": "$14.99",
+      "rating": 4.5,
+      "reviews": 3225,
+      "url": "https://www.amazon.com/Womens-Shirts-Protection-Lightweight-Workout/dp/B0CSDK2C3P/ref=zg_bs_g_3407731_d_sccl_22/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (3,225 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 23,
+      "asin": "B0DT9BG2NG",
+      "title": "G Gradual Men's Athletic Running Shorts with Zipper Pockets Quick Dry 7\"/ 5\"/ 9\" Workout Gym Shorts for Basketball Hikin",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71zQ7hga1hL._AC_UL300_SR300,200_.jpg",
+      "price": "$16.99",
+      "rating": 4.4,
+      "reviews": 858,
+      "url": "https://www.amazon.com/Gradual-Athletic-Running-Pockets-Basketball/dp/B0DT9BG2NG/ref=zg_bs_g_3407731_d_sccl_23/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 90,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Mercado validado con competencia moderada. Diferenciación en diseño o packaging puede marcar la diferencia. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 24,
+      "asin": "B0B3CP6VY9",
+      "title": "CRZ YOGA Butterluxe Y Back Sports Bras for Women - Padded Racerback Low Impact Spaghetti Thin Strap Workout Yoga Top",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81o+MTlAFAL._AC_UL300_SR300,200_.jpg",
+      "price": "$28.00",
+      "rating": 4.5,
+      "reviews": 7667,
+      "url": "https://www.amazon.com/CRZ-YOGA-Womens-Butterluxe-Sports/dp/B0B3CP6VY9/ref=zg_bs_g_3407731_d_sccl_24/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 89,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (7,667 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 25,
+      "asin": "B08JLFBXMP",
+      "title": "Amazon Essentials Men's Moisture Wicking Breathable Active Performance Tech Gym T-Shirts, Pack of 2",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81V+0yBHqiL._AC_UL300_SR300,200_.jpg",
+      "price": "$11.40",
+      "rating": 4.4,
+      "reviews": 12586,
+      "url": "https://www.amazon.com/Amazon-Essentials-2-Pack-Performance-T-Shirt/dp/B08JLFBXMP/ref=zg_bs_g_3407731_d_sccl_25/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 75,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (12,586 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 26,
+      "asin": "B01AVDVHTI",
+      "title": "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71S4-NjoTDL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.98",
+      "rating": 4.5,
+      "reviews": 135708,
+      "url": "https://www.amazon.com/Fit-Simplify-Resistance-Exercise-Instruction/dp/B01AVDVHTI/ref=zg_bs_g_3407731_d_sccl_26/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (135,708 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 27,
+      "asin": "B0728KK8VK",
+      "title": "Amazon Essentials Men's Athletic Basketball Gym,Performance Tech Loose-Fit Training Shorts, Pack of 2",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/810ZOnAf7SL._AC_UL300_SR300,200_.jpg",
+      "price": "$15.90",
+      "rating": 4.6,
+      "reviews": 75869,
+      "url": "https://www.amazon.com/Amazon-Essentials-2-Pack-Loose-Fit-Performance/dp/B0728KK8VK/ref=zg_bs_g_3407731_d_sccl_27/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 89,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (75,869 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 28,
+      "asin": "B087X8XVQC",
+      "title": "MAGCOMSEN Women's Long Sleeve Shirts UPF 50+ Sun Protection Shirts for Hiking Fishing Workout Rash Guard",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61B7czqNg0L._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.6,
+      "reviews": 4370,
+      "url": "https://www.amazon.com/MAGCOMSEN-Protection-Athletic-Performance-Rashguard/dp/B087X8XVQC/ref=zg_bs_g_3407731_d_sccl_28/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (4,370 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 29,
+      "asin": "B01LP0U5X0",
+      "title": "Amazon Basics Extra Thick Exercise Yoga Mat with Carrying Strap",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61WrjbRYC3L._AC_UL300_SR300,200_.jpg",
+      "price": "$21.96",
+      "rating": 4.6,
+      "reviews": 68849,
+      "url": "https://www.amazon.com/AmazonBasics-Extra-Thick-Exercise-Carrying/dp/B01LP0U5X0/ref=zg_bs_g_3407731_d_sccl_29/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 89,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (68,849 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    },
+    {
+      "rank": 30,
+      "asin": "B00S4GMSOI",
+      "title": "Hanes Boys' Socks Pack, Double Tough Moisture Wicking Ankle, Crew, No Show Socks, 12 & 14 Pair Packs",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81h9l-sg29L._AC_UL300_SR300,200_.jpg",
+      "price": "$6.99",
+      "rating": 4.7,
+      "reviews": 23758,
+      "url": "https://www.amazon.com/Hanes-Stretch-Comfortable-Cushioned-12-Pack/dp/B00S4GMSOI/ref=zg_bs_g_3407731_d_sccl_30/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Cultura de gym muy fuerte en Panamá. Videos de demostración convierten bien.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (23,758 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Cultura de gym muy arraigada en PtyCity. Productos de fitness con demos en video generan alta conversión en redes."
+      }
+    }
+  ],
+  "bebe": [
+    {
+      "rank": 1,
+      "asin": "B00LIX3AW8",
+      "title": "3 Sprouts Large Toy Chest for Kids with Lid and Handles - Collapsible Toy Storage Bin/Trunk/Box/Basket Organizer for Boy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71EUzjtzEWL._AC_UL300_SR300,200_.jpg",
+      "price": "$33.99",
+      "rating": 4.6,
+      "reviews": 8280,
+      "url": "https://www.amazon.com/Sprouts-Kids-Toy-Chest-Storage/dp/B00LIX3AW8/ref=zg_bs_g_166827011_d_sccl_1/135-4421783-7936750",
+      "monthly_sales_est": 6000,
+      "panama": {
+        "score": 87,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (8,280 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 2,
+      "asin": "B01MSZ51S2",
+      "title": "3 Sprouts Large Toy Chest for Kids with Lid and Handles - Collapsible Toy Storage Bin/Trunk/Box/Basket Organizer for Boy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/715SGG2TLKL._AC_UL300_SR300,200_.jpg",
+      "price": "$33.99",
+      "rating": 4.6,
+      "reviews": 8280,
+      "url": "https://www.amazon.com/Sprouts-Kids-Toy-Chest-Storage/dp/B01MSZ51S2/ref=zg_bs_g_166827011_d_sccl_2/135-4421783-7936750",
+      "monthly_sales_est": 3500,
+      "panama": {
+        "score": 87,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (8,280 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 3,
+      "asin": "B075CWH1HD",
+      "title": "3 Sprouts Large Toy Chest for Kids with Lid and Handles - Collapsible Toy Storage Bin/Trunk/Box/Basket Organizer for Boy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71yZfKQx+5L._AC_UL300_SR300,200_.jpg",
+      "price": "$33.99",
+      "rating": 4.6,
+      "reviews": 8280,
+      "url": "https://www.amazon.com/Sprouts-Kids-Toy-Chest-Storage/dp/B075CWH1HD/ref=zg_bs_g_166827011_d_sccl_3/135-4421783-7936750",
+      "monthly_sales_est": 3500,
+      "panama": {
+        "score": 87,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (8,280 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 4,
+      "asin": "B00LIWZ3TM",
+      "title": "3 Sprouts Large Toy Chest for Kids with Lid and Handles - Collapsible Toy Storage Bin/Trunk/Box/Basket Organizer for Boy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71xuQLZa6sL._AC_UL300_SR300,200_.jpg",
+      "price": "$33.99",
+      "rating": 4.6,
+      "reviews": 8280,
+      "url": "https://www.amazon.com/Sprouts-Kids-Toy-Chest-Storage/dp/B00LIWZ3TM/ref=zg_bs_g_166827011_d_sccl_4/135-4421783-7936750",
+      "monthly_sales_est": 2200,
+      "panama": {
+        "score": 87,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (8,280 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 5,
+      "asin": "B01MXYAG5V",
+      "title": "3 Sprouts Large Toy Chest for Kids with Lid and Handles - Collapsible Toy Storage Bin/Trunk/Box/Basket Organizer for Boy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71n19+87L6L._AC_UL300_SR300,200_.jpg",
+      "price": "$33.99",
+      "rating": 4.6,
+      "reviews": 8280,
+      "url": "https://www.amazon.com/Sprouts-Kids-Toy-Chest-Storage/dp/B01MXYAG5V/ref=zg_bs_g_166827011_d_sccl_5/135-4421783-7936750",
+      "monthly_sales_est": 2200,
+      "panama": {
+        "score": 87,
+        "level": "ALTO",
+        "emoji": "🟢",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (8,280 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 6,
+      "asin": "B00WW7YYW4",
+      "title": "3 Sprouts Large Toy Chest for Kids with Lid and Handles - Collapsible Toy Storage Bin/Trunk/Box/Basket Organizer for Boy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71en4VYOk4L._AC_UL300_SR300,200_.jpg",
+      "price": "$33.99",
+      "rating": 4.6,
+      "reviews": 8280,
+      "url": "https://www.amazon.com/Sprouts-Kids-Toy-Chest-Storage/dp/B00WW7YYW4/ref=zg_bs_g_166827011_d_sccl_6/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 84,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (8,280 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 7,
+      "asin": "B00G5JGU72",
+      "title": "3 Sprouts Large Toy Chest for Kids with Lid and Handles - Collapsible Toy Storage Bin/Trunk/Box/Basket Organizer for Boy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71KX4bmOiXL._AC_UL300_SR300,200_.jpg",
+      "price": "$33.99",
+      "rating": 4.6,
+      "reviews": 8280,
+      "url": "https://www.amazon.com/Sprouts-Kids-Toy-Chest-Storage/dp/B00G5JGU72/ref=zg_bs_g_166827011_d_sccl_7/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 84,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (8,280 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 8,
+      "asin": "B0759QGYKK",
+      "title": "3 Sprouts Large Toy Chest for Kids with Lid and Handles - Collapsible Toy Storage Bin/Trunk/Box/Basket Organizer for Boy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71CPKKyJcBL._AC_UL300_SR300,200_.jpg",
+      "price": "",
+      "rating": 4.6,
+      "reviews": 8280,
+      "url": "https://www.amazon.com/Sprouts-Kids-Toy-Chest-Storage/dp/B0759QGYKK/ref=zg_bs_g_166827011_d_sccl_8/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 72,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (8,280 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 9,
+      "asin": "B09XF389LC",
+      "title": "WOW! STUFF Jurassic World Drop 'n Pop Dino - Blue Velociraptor | Dinosaur Egg with Pop-up Plush Toy | Official Dominion ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71LpUjp999L._AC_UL300_SR300,200_.jpg",
+      "price": "",
+      "rating": 4.0,
+      "reviews": 52,
+      "url": "https://www.amazon.com/STUFF-Jurassic-World-Drop-Dino/dp/B09XF389LC/ref=zg_bs_g_166827011_d_sccl_9/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 79,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    },
+    {
+      "rank": 10,
+      "asin": "B0000CNQXS",
+      "title": "Household Essentials 01889 Kids 15-Pocket Over Door Organizer",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41-TdruX-lL._AC_UL300_SR300,200_.jpg",
+      "price": "",
+      "rating": 4.4,
+      "reviews": 8,
+      "url": "https://www.amazon.com/Household-Essentials-01889-15-Pocket-Organizer/dp/B0000CNQXS/ref=zg_bs_g_166827011_d_sccl_10/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 79,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta natalidad. Compra emocional: el precio no es barrera para los padres.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Muy pocas reseñas indica mercado poco saturado — gran oportunidad de ser primero en Panamá. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta tasa de natalidad y padres jóvenes digitalizados. Compra emocional — el precio no es barrera para la seguridad del bebé."
+      }
+    }
+  ],
+  "tech": [
+    {
+      "rank": 1,
+      "asin": "B0FDQK69GQ",
+      "title": "Ailun 3 Pack Screen Protector for iPhone 17 Pro Max [6.9 inch] with Installation Frame, Tempered Glass, Sensor Protectio",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71XuFtl2aBL._AC_UL300_SR300,200_.jpg",
+      "price": "$6.98",
+      "rating": 4.6,
+      "reviews": 1131959,
+      "url": "https://www.amazon.com/Ailun-iPhone-Pro-Max-Installation/dp/B0FDQK69GQ/ref=zg_bs_g_2335752011_d_sccl_1/135-4421783-7936750",
+      "monthly_sales_est": 6000,
+      "panama": {
+        "score": 70,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Producto muy validado con ~6,000 ventas/mes en Amazon USA. Producto muy competido en USA (1,131,959 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 2,
+      "asin": "B0FDQH511S",
+      "title": "Ailun 3 Pack Screen Protector for iPhone 17 Pro Max [6.9 inch] + 3 Pack Camera Lens Protector with Installation Frame,Dy",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/716F1ux70NL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.88",
+      "rating": 4.5,
+      "reviews": 430557,
+      "url": "https://www.amazon.com/Ailun-iPhone-Pro-Max-Installation/dp/B0FDQH511S/ref=zg_bs_g_2335752011_d_sccl_2/135-4421783-7936750",
+      "monthly_sales_est": 3500,
+      "panama": {
+        "score": 70,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (430,557 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 3,
+      "asin": "B0FH65ZLHV",
+      "title": "SUPFINE Magnetic for iPhone 17 Case (Compatible with MagSafe)(Military Grade Drop Protection) Translucent Matte Shockpro",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71EVEUefv3L._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.6,
+      "reviews": 68323,
+      "url": "https://www.amazon.com/SUPFINE-17-Case-Translucent-Anti-Fingerprint/dp/B0FH65ZLHV/ref=zg_bs_g_2335752011_d_sccl_3/135-4421783-7936750",
+      "monthly_sales_est": 3500,
+      "panama": {
+        "score": 70,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Producto muy validado con ~3,500 ventas/mes en Amazon USA. Producto muy competido en USA (68,323 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 4,
+      "asin": "B0FDQ3PWCX",
+      "title": "FNTCASE for iPhone 17 Pro-Max Case: Clear Magnetic Phone Cases with Screen Protector Compatible with Magsafe Slim Anti Y",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71KQujT9ATL._AC_UL300_SR300,200_.jpg",
+      "price": "$6.99",
+      "rating": 4.6,
+      "reviews": 77703,
+      "url": "https://www.amazon.com/FNTCASE-iPhone-17-Pro-Max-Case/dp/B0FDQ3PWCX/ref=zg_bs_g_2335752011_d_sccl_4/135-4421783-7936750",
+      "monthly_sales_est": 2200,
+      "panama": {
+        "score": 70,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (77,703 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 5,
+      "asin": "B09KR8P3L5",
+      "title": "iPhone 17 16 15 Charger Fast Charging Type C Chargers USB C Charger Block iPhone 17 16 15 Air Pro Max Chargers with 6FT ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61PVCzroI1L._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.5,
+      "reviews": 36899,
+      "url": "https://www.amazon.com/Fast-Charger-USB-Wall-Charegr/dp/B09KR8P3L5/ref=zg_bs_g_2335752011_d_sccl_5/135-4421783-7936750",
+      "monthly_sales_est": 2200,
+      "panama": {
+        "score": 70,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Producto muy validado con ~2,200 ventas/mes en Amazon USA. Producto muy competido en USA (36,899 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 6,
+      "asin": "B0DFH8SNK5",
+      "title": "FNTCASE for iPhone 15 Case: for iPhone 14 Case & iPhone 13 Case [Compatible with Magsafe] Translucent Matte Cases with [",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/714Z2a48eDL._AC_UL300_SR300,200_.jpg",
+      "price": "$8.99",
+      "rating": 4.5,
+      "reviews": 28974,
+      "url": "https://www.amazon.com/FNTCASE-iPhone-15-Case-Matte/dp/B0DFH8SNK5/ref=zg_bs_g_2335752011_d_sccl_6/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 67,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (28,974 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 7,
+      "asin": "B0FH4ZWQ6X",
+      "title": "PEHAEL 3+3 Pack for iPhone 17 Pro Max Privacy Screen Protector with Camera Lens Protector Full Coverage Anti-Spy Tempere",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61keNeEq3oL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.95",
+      "rating": 4.4,
+      "reviews": 197711,
+      "url": "https://www.amazon.com/PEHAEL-iPhone-Pro-Max-Installation/dp/B0FH4ZWQ6X/ref=zg_bs_g_2335752011_d_sccl_7/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (197,711 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 8,
+      "asin": "B0F8VZ7QVX",
+      "title": "NEW'C 3 Pack Designed for iPhone 16 Pro, iPhone 17, 17 Pro Screen Protector (6.3 inches), Enhanced Tempered Glass Protec",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61QbN2NoSjL._AC_UL300_SR300,200_.jpg",
+      "price": "$7.98",
+      "rating": 4.6,
+      "reviews": 314527,
+      "url": "https://www.amazon.com/NEWC-Pro-6-3-inches-installation/dp/B0F8VZ7QVX/ref=zg_bs_g_2335752011_d_sccl_8/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 67,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (314,527 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 9,
+      "asin": "B0FJS7782G",
+      "title": "TOCOL for iPhone 17 Screen Protector 6.3 inch 9H Hardness Military Grade Shatterproof HD Tempered Glass for Full Coverag",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71fE9hQK1mL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.4,
+      "reviews": 47155,
+      "url": "https://www.amazon.com/TOCOL-iPhone-17-Shatterproof-Protection/dp/B0FJS7782G/ref=zg_bs_g_2335752011_d_sccl_9/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (47,155 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 10,
+      "asin": "B0DFVB13XF",
+      "title": "Misxi 2 Pack Tempered Glass Case Compatible for Apple Watch Series 11 (2025) Series 10 46mm, Screen Protector Cover for ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61ODqzlY4ML._AC_UL300_SR300,200_.jpg",
+      "price": "$9.96",
+      "rating": 4.4,
+      "reviews": 195597,
+      "url": "https://www.amazon.com/Misxi-Compatible-Protection-Lightweight-Scratch-Resistant/dp/B0DFVB13XF/ref=zg_bs_g_2335752011_d_sccl_10/135-4421783-7936750",
+      "monthly_sales_est": 1400,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~1,400 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (195,597 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 11,
+      "asin": "B0FDQH15KW",
+      "title": "Ailun 3 Pack for iPhone 17 Pro Max Privacy Screen Protector [6.9 inch]+ 3 Pack Camera Lens Protector with Installation F",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71bdcSmIh3L._AC_UL300_SR300,200_.jpg",
+      "price": "$9.98",
+      "rating": 4.5,
+      "reviews": 142464,
+      "url": "https://www.amazon.com/Ailun-iPhone-Pro-Max-Installation/dp/B0FDQH15KW/ref=zg_bs_g_2335752011_d_sccl_11/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 67,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (142,464 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 12,
+      "asin": "B0FDQK73N6",
+      "title": "Ailun 3 Pack for iPhone 17 Pro Privacy Screen Protector [6.3 inch] with installation frame, Anti Spy Private Tempered Gl",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71h1ZLa+-7L._AC_UL300_SR300,200_.jpg",
+      "price": "$7.98",
+      "rating": 4.4,
+      "reviews": 164363,
+      "url": "https://www.amazon.com/Ailun-iPhone-Pro-installation-Anti-Scratch/dp/B0FDQK73N6/ref=zg_bs_g_2335752011_d_sccl_12/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (164,363 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 13,
+      "asin": "B0F1TNK61D",
+      "title": "Miracase for iPhone 17e Case & iPhone 16e Case, Full-Body Phone with Built-in Glass Screen Protector, [Magnetic with Mag",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71l3AVZuJOL._AC_UL300_SR300,200_.jpg",
+      "price": "$19.99",
+      "rating": 4.3,
+      "reviews": 107706,
+      "url": "https://www.amazon.com/Miracase-Magnetic-Full-Body-Protector-Compatible/dp/B0F1TNK61D/ref=zg_bs_g_2335752011_d_sccl_13/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (107,706 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 14,
+      "asin": "B0B283QP2N",
+      "title": "iPhone Charger Fast Charging 2 Pack Type C Wall Charger Block with 2 Pack [6FT&10FT] Long USB C to Lightning Cable for i",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61rGWwyFDjL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.5,
+      "reviews": 46325,
+      "url": "https://www.amazon.com/Charger-charging-Certified-lightning-AirPods/dp/B0B283QP2N/ref=zg_bs_g_2335752011_d_sccl_14/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 67,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (46,325 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 15,
+      "asin": "B079HV3TC9",
+      "title": "Hiearcool Waterproof Phone Pouch, IPX8 Waterproof Phone Case for iPhone 17/16/15/14 Pro Max, Cell Phone Dry Bag for Beac",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61741W37lIL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.6,
+      "reviews": 111341,
+      "url": "https://www.amazon.com/Hiearcool-Waterproof-Phone-Pouch-Underwater-2/dp/B079HV3TC9/ref=zg_bs_g_2335752011_d_sccl_15/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 67,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (111,341 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 16,
+      "asin": "B0G19LH9T6",
+      "title": "Miracase Magnetic for iPhone 17 Case, Compatible with MagSafe, Integrated Silicone Camera Control Cover, Shockproof Drop",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61bJDZkosXL._AC_UL300_SR300,200_.jpg",
+      "price": "$15.10",
+      "rating": 4.5,
+      "reviews": 83512,
+      "url": "https://www.amazon.com/Miracase-Compatible-Integrated-Shockproof-Protection/dp/B0G19LH9T6/ref=zg_bs_g_2335752011_d_sccl_16/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (83,512 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 17,
+      "asin": "B0CB1FW5FC",
+      "title": "INIU 45W Fast Charging Portable Charger, 40% Smaller 10000mAh with Detachable Cable, Flight-Safe Travel Power Bank, USB ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71gH0eRJcFL._AC_UL300_SR300,200_.jpg",
+      "price": "$23.99",
+      "rating": 4.5,
+      "reviews": 80704,
+      "url": "https://www.amazon.com/INIU-Portable-High-Speed-Flashlight-Compatible/dp/B0CB1FW5FC/ref=zg_bs_g_2335752011_d_sccl_17/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (80,704 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 18,
+      "asin": "B0CPSBD68W",
+      "title": "2 Pack USB C Charger Block, Dual Port Type C Wall Charger Fast Charging 20W Power Adapter Cube for iPhone 14/14 Pro/14 P",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/5134nknNJxL._AC_UL300_SR300,200_.jpg",
+      "price": "$6.99",
+      "rating": 4.6,
+      "reviews": 20763,
+      "url": "https://www.amazon.com/Charger-Charging-Adapter-iPhone-Samsung/dp/B0CPSBD68W/ref=zg_bs_g_2335752011_d_sccl_18/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (20,763 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 19,
+      "asin": "B0FH6GTY53",
+      "title": "SuydanBox Magnetic for iPhone 17 Pro Max Case, Compatible with MagSafe, [Full Camera Protection][Screen Protector] Silic",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71TOeU6yOoL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.5,
+      "reviews": 25283,
+      "url": "https://www.amazon.com/SuydanBox-Compatible-Protection-Shockproof-Green/dp/B0FH6GTY53/ref=zg_bs_g_2335752011_d_sccl_19/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (25,283 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 20,
+      "asin": "B0FDQKLW48",
+      "title": "Ailun 3 Pack Camera Lens Protector for iPhone 17 Pro Max,Tempered Glass,9H Hardness,Ultra HD,Anti-Scratch,Case Friendly,",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81faP2wO-CL._AC_UL300_SR300,200_.jpg",
+      "price": "$6.88",
+      "rating": 4.4,
+      "reviews": 54857,
+      "url": "https://www.amazon.com/Ailun-iPhone-Pro-Max-Anti-Scratch/dp/B0FDQKLW48/ref=zg_bs_g_2335752011_d_sccl_20/135-4421783-7936750",
+      "monthly_sales_est": 850,
+      "panama": {
+        "score": 63,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Buen volumen con ~850 ventas/mes — señal de demanda real y sostenida. Producto muy competido en USA (54,857 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 21,
+      "asin": "B0GCBMBGBX",
+      "title": "Ailun Glass Screen Protector for Galaxy S26 Ultra [6.9 Inch] 3Pack + 2Pack Camera Lens Tempered Glass Fingerprint Unlock",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71PQRQ0N4dL._AC_UL300_SR300,200_.jpg",
+      "price": "$7.98",
+      "rating": 4.5,
+      "reviews": 48778,
+      "url": "https://www.amazon.com/Ailun-S26-Ultra-6-9-Anti-Scratch/dp/B0GCBMBGBX/ref=zg_bs_g_2335752011_d_sccl_21/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (48,778 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 22,
+      "asin": "B0DN1S1YLV",
+      "title": "ANDERY Car Phone Holder for Magsafe [78+LBS Strongest Suction & 2400gf Strongest Magnetic] 360° Adjustable Car Phone Mou",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71I64kA4p2L._AC_UL300_SR300,200_.jpg",
+      "price": "$25.58",
+      "rating": 4.4,
+      "reviews": 21594,
+      "url": "https://www.amazon.com/Magsafe-Strongest-Suction-Magnetic-Adjustable/dp/B0DN1S1YLV/ref=zg_bs_g_2335752011_d_sccl_22/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 75,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (21,594 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 23,
+      "asin": "B0C69HB8PM",
+      "title": "iPhone 17 16 15 Charger Fast Charging,2Pack 20W Apple iPad USB C Wall Chrager Block with 6FT USB C to C Cable for iPhone",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71H6iiwZBbL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.95",
+      "rating": 4.6,
+      "reviews": 10251,
+      "url": "https://www.amazon.com/iPhone-Charger-Charging-Apple-MacBook/dp/B0C69HB8PM/ref=zg_bs_g_2335752011_d_sccl_23/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (10,251 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 24,
+      "asin": "B0DJFW7PNM",
+      "title": "Apple 20W USB-C Compact Power Adapter: Fast and Convenient Charging, Type C Wall Charger",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/31EQge6IQQL._AC_UL300_SR300,200_.jpg",
+      "price": "$14.99",
+      "rating": 4.8,
+      "reviews": 11824,
+      "url": "https://www.amazon.com/Apple-20W-USB-C-Power-Adapter/dp/B0DJFW7PNM/ref=zg_bs_g_2335752011_d_sccl_24/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (11,824 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 25,
+      "asin": "B0DP2PYTJ2",
+      "title": "jaroco Magnetic for iPhone 13 Case, [Compatible with MagSafe][Military Grade Drop Protection][Heavy Duty Protection][Non",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71L4SatfVuL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.6,
+      "reviews": 11222,
+      "url": "https://www.amazon.com/jaroco-iPhone-13-Compatible-Protection/dp/B0DP2PYTJ2/ref=zg_bs_g_2335752011_d_sccl_25/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (11,222 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 26,
+      "asin": "B0F3J1GXTD",
+      "title": "Braided Stretchy Band Compatible with Apple Watch Bands 38mm 40mm 41mm 42mm 44mm 45mm 46mm 49mm Women Men, Soft Nylon So",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71HVohq-IPL._AC_UL300_SR300,200_.jpg",
+      "price": "$9.99",
+      "rating": 4.5,
+      "reviews": 4116,
+      "url": "https://www.amazon.com/Braided-Stretchy-Compatible-Magnetic-iWatch/dp/B0F3J1GXTD/ref=zg_bs_g_2335752011_d_sccl_26/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (4,116 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 27,
+      "asin": "B0C8HHV9DK",
+      "title": "Anker iPhone Charger, 2-Pack 20W Fast USB C Charger Block, Type C Charger Fast Charging for iPhone 17/17 Pro Max/16 Seri",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/719R46dVUTL._AC_UL300_SR300,200_.jpg",
+      "price": "$16.99",
+      "rating": 4.6,
+      "reviews": 29256,
+      "url": "https://www.amazon.com/iPhone-Charger-Anker-AirPods-Included/dp/B0C8HHV9DK/ref=zg_bs_g_2335752011_d_sccl_27/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (29,256 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 28,
+      "asin": "B0FBWM4FY5",
+      "title": "UNBREAKcable 2-Pack Screen Protector for iPhone 17 Pro, Military-Grade Shatterproof Tempered Glass [9H+ Hardness] [Easy ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61fuY2jkNuL._AC_UL300_SR300,200_.jpg",
+      "price": "$16.99",
+      "rating": 4.3,
+      "reviews": 39427,
+      "url": "https://www.amazon.com/UNBREAKcable-iPhone-17-Shatterproof-Installation/dp/B0FBWM4FY5/ref=zg_bs_g_2335752011_d_sccl_28/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 75,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (39,427 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 29,
+      "asin": "B0D4215HCX",
+      "title": "LISEN Retractable Car Charger, 84W Car Charger USB C Fast Charger Adapter for iPhone, Car Accessories for Men Women, Gif",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71Ryl5xKbuL._AC_UL300_SR300,200_.jpg",
+      "price": "$16.14",
+      "rating": 4.6,
+      "reviews": 19016,
+      "url": "https://www.amazon.com/LISEN-Retractable-Charger-Charging-Accessories/dp/B0D4215HCX/ref=zg_bs_g_2335752011_d_sccl_29/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 77,
+        "level": "MEDIO",
+        "emoji": "🟡",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (19,016 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio accesible para clase media panameña — compra impulsiva viable en redes. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    },
+    {
+      "rank": 30,
+      "asin": "B0FDKXNZCQ",
+      "title": "TOCOL for iPhone 17 Case, Compatible with Magsafe, Full Camera Protection, Built-in Magnets, Drop Protection, Translucen",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/61VDJhULLXL._AC_UL300_SR300,200_.jpg",
+      "price": "$8.99",
+      "rating": 4.6,
+      "reviews": 54673,
+      "url": "https://www.amazon.com/TOCOL-iPhone-17-Compatible-Translucent/dp/B0FDKXNZCQ/ref=zg_bs_g_2335752011_d_sccl_30/135-4421783-7936750",
+      "monthly_sales_est": 550,
+      "panama": {
+        "score": 65,
+        "level": "BAJO",
+        "emoji": "🔴",
+        "notes": "Alta penetración smartphones. Accesorios con identidad visual se diferencian.",
+        "description": "Volumen moderado de ~550 ventas/mes en USA. Producto muy competido en USA (54,673 reseñas). En Panamá el mercado es más pequeño y hay más espacio. Precio muy bajo — ideal para primer pedido impulsivo online sin fricción. Alta penetración de smartphones. Accesorios con diseño e identidad visual se diferencian fácilmente de los genéricos locales."
+      }
+    }
+  ]
+}
