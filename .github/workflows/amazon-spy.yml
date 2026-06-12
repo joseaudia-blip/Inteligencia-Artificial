@@ -1,0 +1,42 @@
+name: Amazon Fashion Spy — Daily 6AM Panama
+
+on:
+  schedule:
+    # 11:00 UTC = 06:00 Panama time (UTC-5)
+    - cron: "0 11 * * *"
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  spy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        working-directory: amazon-spy
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium --with-deps
+
+      - name: Run scraper
+        working-directory: amazon-spy
+        run: python main.py
+
+      - name: Commit and push report
+        run: |
+          git config user.name  "Amazon Spy Bot"
+          git config user.email "bot@amazon-spy"
+          git add amazon-spy/reports/
+          git diff --staged --quiet || git commit -m "📦 Daily report $(date -u '+%Y-%m-%d') [skip ci]"
+          git push
