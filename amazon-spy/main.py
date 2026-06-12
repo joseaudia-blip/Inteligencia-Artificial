@@ -1,26 +1,25 @@
 """
 Amazon Fashion Spy — Main orchestrator
 Runs daily via GitHub Actions at 6:00 AM Panama time (11:00 AM UTC).
+Report is published to docs/index.html → accessible via GitHub Pages.
 """
 
 import asyncio
 import json
-import os
 from datetime import datetime
 from pathlib import Path
 
 from categories import CATEGORIES
 from scraper import run_scraper
 from scorer import score_panama, estimate_monthly_sales
-from report import generate_html, generate_email_html
-from send_email import send as send_email
+from report import generate_html
 
 
 REPORTS_DIR = Path(__file__).parent / "reports"
+DOCS_DIR    = Path(__file__).parent.parent / "docs"
 
 
 def enrich(products: list[dict], category: dict) -> list[dict]:
-    """Add Panama score and sales estimate to each product."""
     enriched = []
     for p in products:
         p["monthly_sales_est"] = estimate_monthly_sales(p.get("rank", 50))
@@ -42,7 +41,7 @@ def print_summary(all_products: dict[str, list[dict]]) -> None:
             print(
                 f"  {cat['emoji']} {cat['name']:22s} "
                 f"{len(products):>3} productos | "
-                f"top score 🇵🇦 {top['panama']['score']}/100"
+                f"top 🇵🇦 {top['panama']['score']}/100"
             )
     print(f"{'='*55}\n")
 
@@ -59,39 +58,33 @@ async def main() -> None:
     cat_map = {c["id"]: c for c in CATEGORIES}
     all_products: dict[str, list[dict]] = {}
     for cat_id, products in raw_results.items():
-        cat = cat_map[cat_id]
-        all_products[cat_id] = enrich(products, cat)
+        all_products[cat_id] = enrich(products, cat_map[cat_id])
 
-    # 3 — Summary to stdout
+    # 3 — Summary to stdout (visible in GitHub Actions logs)
     print_summary(all_products)
 
     # 4 — Generate HTML report
     REPORTS_DIR.mkdir(exist_ok=True)
-    date_slug = now.strftime("%Y-%m-%d")
+    date_slug  = now.strftime("%Y-%m-%d")
+    html       = generate_html(all_products, CATEGORIES, now)
+
     report_path = REPORTS_DIR / f"{date_slug}.html"
-    latest_path = REPORTS_DIR / "latest.html"
-
-    html = generate_html(all_products, CATEGORIES, now)
     report_path.write_text(html, encoding="utf-8")
-    latest_path.write_text(html, encoding="utf-8")
-    print(f"✅ Reporte generado: {report_path}")
+    print(f"✅ Reporte: {report_path}")
 
-    # 5 — Save JSON data (for future analysis)
+    # 5 — Save JSON (for future analysis / history)
     json_path = REPORTS_DIR / f"{date_slug}.json"
     json_path.write_text(
         json.dumps(all_products, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    print(f"✅ Datos JSON: {json_path}")
+    print(f"✅ JSON: {json_path}")
 
-    # 6 — Generate email-friendly HTML
-    email_body_path = REPORTS_DIR / f"{date_slug}-email.html"
-    email_html = generate_email_html(all_products, CATEGORIES, now)
-    email_body_path.write_text(email_html, encoding="utf-8")
-    print(f"✅ Email HTML: {email_body_path}")
-
-    # 7 — Send email (only runs if secrets are set)
-    send_email(report_path, email_body_path)
+    # 6 — Publish to GitHub Pages (docs/index.html)
+    DOCS_DIR.mkdir(exist_ok=True)
+    (DOCS_DIR / ".nojekyll").touch()
+    (DOCS_DIR / "index.html").write_text(html, encoding="utf-8")
+    print(f"✅ GitHub Pages: docs/index.html actualizado")
 
     print("\n🏁 Done.\n")
 

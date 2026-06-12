@@ -330,129 +330,153 @@ def generate_html(
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amazon Spy — {date_str}</title>
+<meta name="theme-color" content="#1a1a2e">
 <style>
   :root {{
-    --radius: 12px;
+    --radius: 14px;
     --shadow: 0 2px 12px rgba(0,0,0,.08);
-    --bg: #f4f6f9;
+    --bg: #f0f2f5;
     --surface: #fff;
     --text: #1a1a2e;
     --muted: #6b7280;
   }}
-  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }}
   body {{ font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-          background: var(--bg); color: var(--text); }}
+          background: var(--bg); color: var(--text); font-size: 16px; }}
 
-  /* HEADER */
+  /* ── HEADER ─────────────────────────────────── */
   .header {{ background: linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);
-             color: #fff; padding: 28px 24px 22px; text-align: center; }}
-  .header h1 {{ font-size: 1.6rem; font-weight: 700; letter-spacing: -.5px; }}
-  .header-sub {{ color: #94a3b8; font-size: .9rem; margin-top: 6px; }}
-  .header-stats {{ display: flex; justify-content: center; gap: 24px;
-                   margin-top: 16px; flex-wrap: wrap; }}
-  .stat-pill {{ background: rgba(255,255,255,.1); border-radius: 999px;
-                padding: 6px 16px; font-size: .85rem; font-weight: 600; }}
+             color: #fff; padding: 24px 20px 20px; text-align: center; }}
+  .header h1 {{ font-size: clamp(1.1rem,4vw,1.6rem); font-weight: 800;
+                letter-spacing: -.5px; line-height: 1.2; }}
+  .header-sub {{ color: #94a3b8; font-size: .85rem; margin-top: 6px; }}
+  .header-stats {{ display: flex; justify-content: center; gap: 8px;
+                   margin-top: 14px; flex-wrap: wrap; }}
+  .stat-pill {{ background: rgba(255,255,255,.12); border-radius: 999px;
+                padding: 6px 14px; font-size: .8rem; font-weight: 600; }}
 
-  /* SECTION TITLES */
-  .section {{ max-width: 1300px; margin: 28px auto; padding: 0 16px; }}
-  .section-title {{ font-size: 1.15rem; font-weight: 700; margin-bottom: 16px;
+  /* ── SECTIONS ────────────────────────────────── */
+  .section {{ max-width: 1300px; margin: 20px auto; padding: 0 12px; }}
+  .section-title {{ font-size: 1rem; font-weight: 700; margin-bottom: 14px;
                     display: flex; align-items: center; gap: 8px; }}
 
-  /* SUMMARY CARDS */
+  /* ── SUMMARY GRID ────────────────────────────── */
   .summary-grid {{ display: grid;
-                   grid-template-columns: repeat(auto-fill,minmax(170px,1fr));
-                   gap: 12px; }}
+                   grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
+                   gap: 10px; }}
   .summary-card {{ background: var(--surface); border-radius: var(--radius);
-                   padding: 16px 14px; box-shadow: var(--shadow); }}
-  .sum-emoji {{ font-size: 1.6rem; }}
-  .sum-name {{ font-size: .8rem; color: var(--muted); margin: 4px 0 2px; font-weight: 600; }}
-  .sum-count {{ font-size: 1.1rem; font-weight: 700; }}
-  .sum-score {{ font-size: .78rem; color: var(--muted); margin-top: 4px; }}
-  .sum-top {{ font-size: .72rem; color: var(--muted); margin-top: 4px;
+                   padding: 14px 12px; box-shadow: var(--shadow); }}
+  .sum-emoji {{ font-size: 1.5rem; }}
+  .sum-name {{ font-size: .72rem; color: var(--muted); margin: 4px 0 2px; font-weight: 600; }}
+  .sum-count {{ font-size: 1rem; font-weight: 700; }}
+  .sum-score {{ font-size: .72rem; color: var(--muted); margin-top: 3px; }}
+  .sum-top {{ font-size: .68rem; color: var(--muted); margin-top: 3px;
               white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
 
-  /* FILTER BAR */
-  .filter-bar {{ max-width: 1300px; margin: 0 auto 20px; padding: 0 16px;
-                  display: flex; flex-wrap: wrap; gap: 8px; }}
-  .filter-btn {{ background: var(--surface); border: 1.5px solid #e2e8f0;
-                 border-radius: 999px; padding: 7px 16px; font-size: .82rem;
-                 font-weight: 600; cursor: pointer; transition: all .18s;
-                 color: var(--text); }}
-  .filter-btn:hover {{ border-color: var(--cat-color,#1565c0);
-                       color: var(--cat-color,#1565c0); }}
+  /* ── STICKY FILTER BAR ───────────────────────── */
+  .filter-bar-wrap {{ position: sticky; top: 0; z-index: 100;
+                      background: var(--surface);
+                      border-bottom: 1px solid #e2e8f0;
+                      box-shadow: 0 2px 8px rgba(0,0,0,.07); }}
+  .filter-bar {{ max-width: 1300px; margin: 0 auto;
+                 display: flex; gap: 8px; padding: 10px 12px;
+                 overflow-x: auto; -webkit-overflow-scrolling: touch;
+                 scrollbar-width: none; }}
+  .filter-bar::-webkit-scrollbar {{ display: none; }}
+  .filter-btn {{ flex-shrink: 0; background: var(--bg);
+                 border: 1.5px solid #e2e8f0; border-radius: 999px;
+                 padding: 10px 16px; font-size: .8rem; font-weight: 600;
+                 cursor: pointer; transition: all .18s; color: var(--text);
+                 min-height: 44px; white-space: nowrap; }}
   .filter-btn.active {{ background: var(--cat-color,#1565c0);
-                        border-color: var(--cat-color,#1565c0);
-                        color: #fff; }}
+                        border-color: var(--cat-color,#1565c0); color: #fff; }}
 
-  /* PRODUCT GRID */
-  .products-grid {{ max-width: 1300px; margin: 0 auto; padding: 0 16px 40px;
+  /* ── PRODUCT GRID ────────────────────────────── */
+  .products-grid {{ max-width: 1300px; margin: 0 auto;
+                    padding: 12px 12px 48px;
                     display: grid;
                     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-                    gap: 18px; }}
+                    gap: 14px; }}
+
+  /* ── PRODUCT CARD ────────────────────────────── */
   .product-card {{ background: var(--surface); border-radius: var(--radius);
                    box-shadow: var(--shadow); overflow: hidden;
-                   display: flex; flex-direction: column; position: relative;
-                   transition: transform .2s, box-shadow .2s; }}
-  .product-card:hover {{ transform: translateY(-3px);
-                         box-shadow: 0 8px 24px rgba(0,0,0,.12); }}
-  .card-rank {{ position: absolute; top: 10px; left: 10px; background: #1a1a2e;
-                color: #fff; border-radius: 999px; font-size: .72rem;
-                font-weight: 700; padding: 3px 10px; z-index: 2; }}
-  .card-image-wrap {{ height: 200px; background: #f8fafc; display: flex;
+                   display: flex; flex-direction: column; position: relative; }}
+  .card-rank {{ position: absolute; top: 10px; left: 10px;
+                background: #1a1a2e; color: #fff; border-radius: 999px;
+                font-size: .72rem; font-weight: 700; padding: 3px 10px; z-index: 2; }}
+  .card-image-wrap {{ height: 190px; background: #f8fafc; display: flex;
                       align-items: center; justify-content: center; overflow: hidden; }}
-  .card-image {{ width: 100%; height: 100%; object-fit: contain; padding: 12px; }}
+  .card-image {{ width: 100%; height: 100%; object-fit: contain; padding: 14px; }}
   .card-image-placeholder {{ font-size: 3rem; }}
-  .card-body {{ padding: 14px 16px 18px; display: flex; flex-direction: column; gap: 10px; }}
-  .card-cat-badge {{ font-size: .72rem; font-weight: 700; border-radius: 999px;
+  .card-body {{ padding: 14px 14px 16px; display: flex;
+                flex-direction: column; gap: 10px; flex: 1; }}
+  .card-cat-badge {{ font-size: .7rem; font-weight: 700; border-radius: 999px;
                      padding: 3px 10px; display: inline-block; width: fit-content; }}
-  .card-title {{ font-size: .88rem; font-weight: 600; color: var(--text);
+  .card-title {{ font-size: .9rem; font-weight: 600; color: var(--text);
                  text-decoration: none; line-height: 1.45;
                  display: -webkit-box; -webkit-line-clamp: 2;
                  -webkit-box-orient: vertical; overflow: hidden; }}
-  .card-title:hover {{ color: #1565c0; }}
   .card-meta {{ display: flex; flex-direction: column; gap: 3px; }}
-  .meta-price {{ font-size: 1.05rem; font-weight: 700; color: #b12704; }}
-  .meta-rating {{ font-size: .8rem; color: var(--muted); }}
-  .sales-highlight {{ display: flex; align-items: stretch; background: #eff6ff;
+  .meta-price {{ font-size: 1.1rem; font-weight: 700; color: #b12704; }}
+  .meta-rating {{ font-size: .82rem; color: var(--muted); }}
+
+  /* ── SALES HIGHLIGHT BOX ─────────────────────── */
+  .sales-highlight {{ display: flex; background: #eff6ff;
                       border: 1px solid #bfdbfe; border-radius: 10px;
                       overflow: hidden; }}
-  .sales-item {{ flex: 1; padding: 10px 12px; display: flex; flex-direction: column;
-                 gap: 2px; }}
-  .sales-label {{ font-size: .7rem; color: #6b7280; font-weight: 500; }}
-  .sales-value {{ font-size: 1rem; font-weight: 800; color: #1e40af; }}
+  .sales-item {{ flex: 1; padding: 11px 12px; display: flex;
+                 flex-direction: column; gap: 2px; }}
+  .sales-label {{ font-size: .68rem; color: #6b7280; font-weight: 500; }}
+  .sales-value {{ font-size: 1.05rem; font-weight: 800; color: #1e40af; }}
   .sales-divider {{ width: 1px; background: #bfdbfe; margin: 8px 0; }}
-  .panama-section {{ background: #f8fafc; border-radius: 8px; padding: 12px; }}
+
+  /* ── PANAMA SECTION ──────────────────────────── */
+  .panama-section {{ background: #f8fafc; border-radius: 10px; padding: 12px; }}
   .panama-header {{ display: flex; justify-content: space-between;
-                    align-items: center; font-size: .8rem; font-weight: 600;
-                    margin-bottom: 6px; }}
-  .panama-score {{ font-size: .78rem; }}
-  .score-bar-wrap {{ background: #e2e8f0; border-radius: 999px; height: 6px;
+                    align-items: center; font-size: .8rem; font-weight: 700;
+                    margin-bottom: 7px; }}
+  .panama-score {{ font-size: .78rem; font-weight: 700; }}
+  .score-bar-wrap {{ background: #e2e8f0; border-radius: 999px; height: 8px;
                      overflow: hidden; margin-bottom: 10px; }}
-  .score-bar-fill {{ height: 100%; border-radius: 999px; transition: width .4s; }}
+  .score-bar-fill {{ height: 100%; border-radius: 999px; }}
   .panama-description {{ display: flex; gap: 6px; align-items: flex-start;
-                          background: #fff; border-radius: 6px; padding: 9px 10px;
+                          background: #fff; border-radius: 7px; padding: 9px 10px;
                           border-left: 3px solid #94a3b8; }}
   .desc-icon {{ font-size: .85rem; flex-shrink: 0; margin-top: 1px; }}
-  .desc-text {{ font-size: .72rem; color: #374151; line-height: 1.5; }}
-  .view-btn {{ display: block; text-align: center; background: #1565c0;
-               color: #fff; border-radius: 8px; padding: 9px;
-               text-decoration: none; font-size: .82rem; font-weight: 600;
-               margin-top: 4px; transition: background .18s; }}
-  .view-btn:hover {{ background: #0d47a1; }}
+  .desc-text {{ font-size: .75rem; color: #374151; line-height: 1.55; }}
 
-  /* TOP 5 section */
+  /* ── VIEW BUTTON ─────────────────────────────── */
+  .view-btn {{ display: block; text-align: center; background: #1565c0;
+               color: #fff !important; border-radius: 10px; padding: 13px;
+               text-decoration: none; font-size: .88rem; font-weight: 700;
+               margin-top: 4px; letter-spacing: .2px; }}
+
+  /* ── TOP 5 GRID ──────────────────────────────── */
   .top5-grid {{ display: grid;
                 grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-                gap: 18px; }}
+                gap: 14px; }}
 
-  /* FOOTER */
-  .footer {{ text-align: center; padding: 20px; font-size: .78rem;
-             color: var(--muted); }}
+  /* ── FOOTER ──────────────────────────────────── */
+  .footer {{ text-align: center; padding: 20px 16px 40px;
+             font-size: .75rem; color: var(--muted); line-height: 1.6; }}
 
-  @media (max-width: 600px) {{
-    .header h1 {{ font-size: 1.2rem; }}
-    .products-grid {{ grid-template-columns: 1fr; }}
+  /* ══ MOBILE OVERRIDES (≤ 640px) ════════════════ */
+  @media (max-width: 640px) {{
+    .header {{ padding: 20px 16px 16px; }}
+    .section {{ padding: 0 10px; }}
+    .summary-grid {{ grid-template-columns: repeat(4,1fr); gap: 8px; }}
+    .sum-name, .sum-top {{ display: none; }}   /* compact on phone */
+    .products-grid {{ grid-template-columns: 1fr; padding: 10px 10px 60px; gap: 12px; }}
     .top5-grid {{ grid-template-columns: 1fr; }}
+    .card-image-wrap {{ height: 170px; }}
+    .card-body {{ padding: 12px 12px 14px; }}
+    .card-title {{ font-size: .88rem; }}
+    .meta-price {{ font-size: 1.05rem; }}
+    .sales-value {{ font-size: 1rem; }}
+    .view-btn {{ padding: 14px; font-size: .92rem; }}
+    .filter-btn {{ padding: 10px 14px; font-size: .78rem; }}
+    .score-bar-wrap {{ height: 9px; }}
   }}
 </style>
 </head>
@@ -485,9 +509,11 @@ def generate_html(
   </div>
 </div>
 
-<!-- FILTROS -->
-<div class="filter-bar">
-  {buttons_html}
+<!-- FILTROS (sticky) -->
+<div class="filter-bar-wrap">
+  <div class="filter-bar">
+    {buttons_html}
+  </div>
 </div>
 
 <!-- TODOS LOS PRODUCTOS -->
