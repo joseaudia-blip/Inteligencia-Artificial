@@ -15,7 +15,7 @@ CATEGORIES = [
         "emoji": "🧳",
         "color": "#1565c0",
         "bg_color": "#e3f2fd",
-        "url": "https://www.amazon.com/gp/bestsellers/luggage/",
+        "url": "https://www.amazon.com/gp/bestsellers/luggage/3403201/",
         "panama_base": 88,
         "panama_notes": "Panamá = hub de tránsito. Packing cubes, organizadores. Demanda constante.",
     },

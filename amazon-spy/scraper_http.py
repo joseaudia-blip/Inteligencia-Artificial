@@ -41,6 +41,8 @@ def _parse_products(html: str) -> list[dict]:
         "div.zg-grid-general-faceout",
         "div[class*='zg-item']",
         "div[class*='p13n-grid']",
+        "div[class*='zg-grid']",
+        "div[class*='_cDEzb_grid-cell']",
     ]
 
     items = []
@@ -48,6 +50,11 @@ def _parse_products(html: str) -> list[dict]:
         items = soup.select(sel)
         if len(items) >= 3:
             break
+
+    # Last-resort: any element with a data-asin that contains a product link
+    if len(items) < 3:
+        items = [el for el in soup.select("[data-asin]")
+                 if el.get("data-asin") and el.select_one("a[href*='/dp/']")]
 
     for idx, item in enumerate(items[:35]):
         # ASIN — from data-asin or product URL
