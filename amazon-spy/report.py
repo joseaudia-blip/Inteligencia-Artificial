@@ -95,20 +95,16 @@ def _category_summary_card(cat: dict, products: list[dict]) -> str:
     count = len(products)
     if not products:
         return f"""
-<div class="summary-card" data-cat="{cat['id']}" style="border-top:3px solid {cat['color']}" onclick="filterByCat('{cat['id']}')" role="button">
+<div class="summary-card" data-cat="{cat['id']}" style="border-top:3px solid {cat['color']};color:{cat['color']}" onclick="filterByCat('{cat['id']}')" role="button">
   <div class="sum-emoji">{cat['emoji']}</div>
-  <div class="sum-name">{cat['name']}</div>
-  <div class="sum-count">Sin datos</div>
+  <div class="sum-name" style="color:#9ca3af">Sin datos</div>
 </div>"""
     avg_score = round(sum(p["panama"]["score"] for p in products) / count)
-    top = products[0]
     return f"""
-<div class="summary-card" data-cat="{cat['id']}" style="border-top:3px solid {cat['color']}" onclick="filterByCat('{cat['id']}')" role="button">
+<div class="summary-card" data-cat="{cat['id']}" style="border-top:3px solid {cat['color']};color:{cat['color']}" onclick="filterByCat('{cat['id']}')" role="button">
   <div class="sum-emoji">{cat['emoji']}</div>
   <div class="sum-name">{cat['name']}</div>
-  <div class="sum-count" style="color:{cat['color']}">{count} productos</div>
-  <div class="sum-score">🇵🇦 Avg {avg_score}/100</div>
-  <div class="sum-top">🏆 #{top['rank']} {top['title'][:35]}…</div>
+  <div class="sum-score">🇵🇦 {avg_score}/100</div>
 </div>"""
 
 
@@ -364,20 +360,20 @@ def generate_html(
 
   /* ── SUMMARY GRID ────────────────────────────── */
   .summary-grid {{ display: grid;
-                   grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
+                   grid-template-columns: repeat(auto-fill,minmax(110px,1fr));
                    gap: 10px; }}
   .summary-card {{ background: var(--surface); border-radius: var(--radius);
-                   padding: 14px 12px; box-shadow: var(--shadow);
-                   cursor: pointer; transition: transform .15s, box-shadow .15s; }}
+                   padding: 12px 10px; box-shadow: var(--shadow);
+                   cursor: pointer; transition: transform .15s, box-shadow .15s;
+                   text-align: center; }}
   .summary-card:hover, .summary-card:active {{ transform: translateY(-2px);
     box-shadow: 0 4px 16px rgba(0,0,0,.14); }}
-  .summary-card.active-filter {{ outline: 2px solid currentColor; }}
-  .sum-emoji {{ font-size: 1.5rem; }}
-  .sum-name {{ font-size: .72rem; color: var(--muted); margin: 4px 0 2px; font-weight: 600; }}
-  .sum-count {{ font-size: 1rem; font-weight: 700; }}
-  .sum-score {{ font-size: .72rem; color: var(--muted); margin-top: 3px; }}
-  .sum-top {{ font-size: .68rem; color: var(--muted); margin-top: 3px;
-              white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
+  .summary-card.active-filter {{ outline: 2.5px solid; }}
+  .sum-emoji {{ font-size: 1.6rem; }}
+  .sum-name {{ font-size: .75rem; font-weight: 700; margin: 5px 0 3px;
+               color: var(--text); line-height: 1.3; }}
+  .sum-score {{ font-size: .68rem; color: var(--muted); }}
+  .sum-top {{ display: none; }}
 
   /* ── STICKY FILTER BAR ───────────────────────── */
   .filter-bar-wrap {{ position: sticky; top: 0; z-index: 100;
@@ -472,7 +468,7 @@ def generate_html(
     .header {{ padding: 20px 16px 16px; }}
     .section {{ padding: 0 10px; }}
     .summary-grid {{ grid-template-columns: repeat(4,1fr); gap: 8px; }}
-    .sum-name, .sum-top {{ display: none; }}   /* compact on phone */
+    .sum-name {{ font-size: .65rem; }}
     .products-grid {{ grid-template-columns: 1fr; padding: 10px 10px 60px; gap: 12px; }}
     .top5-grid {{ grid-template-columns: 1fr; }}
     .card-image-wrap {{ height: 170px; }}
@@ -533,23 +529,20 @@ def generate_html(
 
 <script>
   function applyFilter(cat) {{
-    // Update filter bar buttons
+    // Filter bar buttons
     document.querySelectorAll('.filter-btn').forEach(b => {{
-      const bc = b.getAttribute('data-cat');
-      b.classList.toggle('active', bc === cat);
+      b.classList.toggle('active', b.getAttribute('data-cat') === cat);
     }});
-    // Update summary cards
+    // Summary cards — hide the ones NOT selected (show all when "all")
     document.querySelectorAll('.summary-card').forEach(c => {{
-      c.classList.toggle('active-filter', c.getAttribute('data-cat') === cat);
+      const match = cat === 'all' || c.getAttribute('data-cat') === cat;
+      c.style.display = match ? '' : 'none';
+      c.classList.toggle('active-filter', cat !== 'all' && match);
     }});
-    // Show / hide product cards
+    // Product cards — show only selected category (no scroll)
     document.querySelectorAll('#products-grid .product-card').forEach(card => {{
       card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
     }});
-    // Scroll to products
-    if (cat !== 'all') {{
-      document.getElementById('products-grid').scrollIntoView({{behavior:'smooth', block:'start'}});
-    }}
   }}
 
   function filterCat(btn, cat) {{ applyFilter(cat); }}
