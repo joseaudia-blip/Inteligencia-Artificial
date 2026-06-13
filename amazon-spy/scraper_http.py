@@ -121,25 +121,46 @@ def _parse_products(html: str) -> list[dict]:
 
 def scrape_category(category: dict) -> list[dict]:
     print(f"  → {category['emoji']} {category['name']}...")
-    try:
-        resp = SESSION.get(category["url"], timeout=20)
+    delays = [3, 7, 15]
+    for attempt in range(4):
+        try:
+            resp = SESSION.get(category["url"], timeout=25)
 
-        if resp.status_code != 200:
+            if resp.status_code == 200 and not any(
+                k in resp.text for k in ["Enter the characters", "robot check", "CAPTCHA"]
+            ):
+                products = _parse_products(resp.text)
+                print(f"  ✓  {len(products)} products")
+                return products
+
+            if resp.status_code == 503 or resp.status_code == 429:
+                if attempt < 3:
+                    wait = delays[attempt]
+                    print(f"  ⚠️  HTTP {resp.status_code} — retry in {wait}s")
+                    time.sleep(wait)
+                    continue
+
+            if any(k in resp.text for k in ["Enter the characters", "robot check", "CAPTCHA"]):
+                if attempt < 3:
+                    wait = delays[attempt]
+                    print(f"  ⚠️  Bot check — retry in {wait}s")
+                    time.sleep(wait)
+                    continue
+                print(f"  ✗  Amazon bot check persists — skipping")
+                return []
+
             print(f"  ✗  HTTP {resp.status_code} — skipping")
             return []
 
-        # Detect bot block / CAPTCHA
-        if any(k in resp.text for k in ["Enter the characters", "robot check", "CAPTCHA"]):
-            print(f"  ⚠️  Amazon bot check detected — skipping")
-            return []
-
-        products = _parse_products(resp.text)
-        print(f"  ✓  {len(products)} products")
-        return products
-
-    except Exception as e:
-        print(f"  ✗  Error: {e}")
-        return []
+        except Exception as e:
+            if attempt < 3:
+                wait = delays[attempt]
+                print(f"  ⚠️  Error ({e}) — retry in {wait}s")
+                time.sleep(wait)
+            else:
+                print(f"  ✗  Error: {e}")
+                return []
+    return []
 
 
 def run_scraper(categories: list[dict]) -> dict[str, list[dict]]:
