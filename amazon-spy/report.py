@@ -95,7 +95,7 @@ def _category_summary_card(cat: dict, products: list[dict]) -> str:
     count = len(products)
     if not products:
         return f"""
-<div class="summary-card" style="border-top:3px solid {cat['color']}">
+<div class="summary-card" data-cat="{cat['id']}" style="border-top:3px solid {cat['color']}" onclick="filterByCat('{cat['id']}')" role="button">
   <div class="sum-emoji">{cat['emoji']}</div>
   <div class="sum-name">{cat['name']}</div>
   <div class="sum-count">Sin datos</div>
@@ -103,7 +103,7 @@ def _category_summary_card(cat: dict, products: list[dict]) -> str:
     avg_score = round(sum(p["panama"]["score"] for p in products) / count)
     top = products[0]
     return f"""
-<div class="summary-card" style="border-top:3px solid {cat['color']}">
+<div class="summary-card" data-cat="{cat['id']}" style="border-top:3px solid {cat['color']}" onclick="filterByCat('{cat['id']}')" role="button">
   <div class="sum-emoji">{cat['emoji']}</div>
   <div class="sum-name">{cat['name']}</div>
   <div class="sum-count" style="color:{cat['color']}">{count} productos</div>
@@ -298,13 +298,15 @@ def generate_html(
     top5 = sorted(flat, key=lambda x: x[0]["panama"]["score"], reverse=True)[:5]
 
     # Filter buttons HTML
-    buttons_html = '<button class="filter-btn active" onclick="filterCat(this,\'all\')">📊 Todas ({n})</button>'.format(
-        n=total_products
-    )
+    buttons_html = (
+        '<button class="filter-btn active" data-cat="all" '
+        'onclick="filterCat(this,\'all\')">📊 Todas ({n})</button>'
+    ).format(n=total_products)
     for cat in categories:
         count = len(all_products.get(cat["id"], []))
         buttons_html += (
-            f'<button class="filter-btn" onclick="filterCat(this,\'{cat["id"]}\')" '
+            f'<button class="filter-btn" data-cat="{cat["id"]}" '
+            f'onclick="filterCat(this,\'{cat["id"]}\')" '
             f'style="--cat-color:{cat["color"]}">'
             f'{cat["emoji"]} {cat["name"]} ({count})</button>'
         )
@@ -365,7 +367,11 @@ def generate_html(
                    grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
                    gap: 10px; }}
   .summary-card {{ background: var(--surface); border-radius: var(--radius);
-                   padding: 14px 12px; box-shadow: var(--shadow); }}
+                   padding: 14px 12px; box-shadow: var(--shadow);
+                   cursor: pointer; transition: transform .15s, box-shadow .15s; }}
+  .summary-card:hover, .summary-card:active {{ transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,.14); }}
+  .summary-card.active-filter {{ outline: 2px solid currentColor; }}
   .sum-emoji {{ font-size: 1.5rem; }}
   .sum-name {{ font-size: .72rem; color: var(--muted); margin: 4px 0 2px; font-weight: 600; }}
   .sum-count {{ font-size: 1rem; font-weight: 700; }}
@@ -493,9 +499,16 @@ def generate_html(
   </div>
 </div>
 
+<!-- FILTROS (sticky — justo bajo el header) -->
+<div class="filter-bar-wrap">
+  <div class="filter-bar">
+    {buttons_html}
+  </div>
+</div>
+
 <!-- RESUMEN POR CATEGORÍA -->
 <div class="section">
-  <div class="section-title">📊 Resumen por categoría</div>
+  <div class="section-title">📊 Toca una categoría para filtrar</div>
   <div class="summary-grid">
     {summary_html}
   </div>
@@ -509,13 +522,6 @@ def generate_html(
   </div>
 </div>
 
-<!-- FILTROS (sticky) -->
-<div class="filter-bar-wrap">
-  <div class="filter-bar">
-    {buttons_html}
-  </div>
-</div>
-
 <!-- TODOS LOS PRODUCTOS -->
 <div class="products-grid" id="products-grid">
   {all_cards_html}
@@ -526,13 +532,28 @@ def generate_html(
 </div>
 
 <script>
-  function filterCat(btn, cat) {{
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  function applyFilter(cat) {{
+    // Update filter bar buttons
+    document.querySelectorAll('.filter-btn').forEach(b => {{
+      const bc = b.getAttribute('data-cat');
+      b.classList.toggle('active', bc === cat);
+    }});
+    // Update summary cards
+    document.querySelectorAll('.summary-card').forEach(c => {{
+      c.classList.toggle('active-filter', c.getAttribute('data-cat') === cat);
+    }});
+    // Show / hide product cards
     document.querySelectorAll('#products-grid .product-card').forEach(card => {{
       card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
     }});
+    // Scroll to products
+    if (cat !== 'all') {{
+      document.getElementById('products-grid').scrollIntoView({{behavior:'smooth', block:'start'}});
+    }}
   }}
+
+  function filterCat(btn, cat) {{ applyFilter(cat); }}
+  function filterByCat(cat) {{ applyFilter(cat); }}
 </script>
 </body>
 </html>"""
