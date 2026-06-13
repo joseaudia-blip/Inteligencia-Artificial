@@ -511,7 +511,7 @@ def generate_html(
 </div>
 
 <!-- TOP 5 DEL DÍA -->
-<div class="section">
+<div class="section" id="top5-section">
   <div class="section-title">🏆 Top 5 del día — Mayor potencial en Panamá</div>
   <div class="top5-grid">
     {top5_html}
@@ -539,7 +539,10 @@ def generate_html(
       c.style.display = match ? '' : 'none';
       c.classList.toggle('active-filter', cat !== 'all' && match);
     }});
-    // Product cards — show only selected category (no scroll)
+    // Top 5 section — hide when filtering a category (mixed results confuse)
+    var top5 = document.getElementById('top5-section');
+    if (top5) top5.style.display = cat === 'all' ? '' : 'none';
+    // Product cards — show only selected category
     document.querySelectorAll('#products-grid .product-card').forEach(card => {{
       card.style.display = (cat === 'all' || card.dataset.category === cat) ? '' : 'none';
     }});
