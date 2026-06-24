@@ -215,7 +215,7 @@ def generate_email_html(
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Amazon Spy — {date_str}</title></head>
+<title>🔥 Trending Amazon Panamá — {date_str}</title></head>
 <body style="margin:0;padding:0;background:#f4f6f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
 <table cellpadding="0" cellspacing="0" width="100%" style="max-width:620px;margin:0 auto;">
   <tr><td>
@@ -225,10 +225,10 @@ def generate_email_html(
            style="background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px 12px 0 0;margin-top:16px;">
       <tr><td style="padding:28px 24px;text-align:center;">
         <div style="font-size:1.4rem;font-weight:800;color:#fff;letter-spacing:-.5px;">
-          📦 Amazon Fashion Spy — Panamá
+          🔥 Trending Amazon — Panamá
         </div>
         <div style="font-size:.85rem;color:#94a3b8;margin-top:6px;">
-          🗓️ {date_str} · ⏰ 06:00 AM · Amazon USA
+          🗓️ {date_str} · ⏰ 06:00 AM · Movers &amp; Shakers — productos que más suben hoy
         </div>
         <table cellpadding="0" cellspacing="8" style="margin:14px auto 0;">
           <tr>
@@ -265,7 +265,7 @@ def generate_email_html(
     <table cellpadding="0" cellspacing="0" width="100%"
            style="background:#f8fafc;border-radius:0 0 12px 12px;border-top:1px solid #e2e8f0;">
       <tr><td style="padding:14px;text-align:center;font-size:.72rem;color:#9ca3af;">
-        Generado automáticamente · Amazon USA Best Sellers · {date_str}<br>
+        Generado automáticamente · Amazon USA Movers &amp; Shakers · {date_str}<br>
         El reporte interactivo completo está adjunto (reporte.html)
       </td></tr>
     </table>
@@ -327,7 +327,7 @@ def generate_html(
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon Spy — {date_str}</title>
+<title>🔥 Trending Amazon Panamá — {date_str}</title>
 <meta name="theme-color" content="#1a1a2e">
 <style>
   :root {{
@@ -486,8 +486,8 @@ def generate_html(
 
 <!-- HEADER -->
 <div class="header">
-  <h1>📦 Amazon Fashion Spy — Panamá</h1>
-  <div class="header-sub">🗓️ {date_str} · ⏰ {time_str} · Amazon USA</div>
+  <h1>🔥 Trending Amazon — Panamá</h1>
+  <div class="header-sub">🗓️ {date_str} · ⏰ {time_str} · Movers &amp; Shakers — productos que más suben hoy</div>
   <div class="header-stats">
     <span class="stat-pill">🔍 7 categorías</span>
     <span class="stat-pill">📦 {total_products} productos</span>
@@ -524,7 +524,7 @@ def generate_html(
 </div>
 
 <div class="footer">
-  Generado automáticamente · Amazon USA Best Sellers · {date_str}
+  Generado automáticamente · Amazon USA Movers &amp; Shakers · {date_str}
 </div>
 
 <script>
