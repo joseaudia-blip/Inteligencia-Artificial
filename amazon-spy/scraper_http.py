@@ -137,7 +137,11 @@ def scrape_category(category: dict) -> list[dict]:
                 k in resp.text for k in ["Enter the characters", "robot check", "CAPTCHA"]
             ):
                 products = _parse_products(resp.text)
-                print(f"  ✓  {len(products)} products")
+                if not products:
+                    snippet = resp.text[:300].replace("\n", " ")
+                    print(f"  ⚠️  0 products parsed — HTML snippet: {snippet}")
+                else:
+                    print(f"  ✓  {len(products)} products")
                 return products
 
             if resp.status_code == 503 or resp.status_code == 429:
