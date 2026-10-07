@@ -138,3 +138,16 @@ Líder de Transformación Digital e IA en Banca | Escalo canales digitales con r
 3. Definir las 3 rutas y el nivel de confidencialidad (ver sección 2).
 4. Publicar el primer post (presentación + tesis de posicionamiento).
 5. Lista de 30 cuentas objetivo (10 headhunters, 10 pares, 10 decisores).
+
+---
+
+## 9. Ajuste por búsqueda confidencial (Panamá + remoto)
+Decisiones del 7 oct 2026: búsqueda confidencial mientras siga en Davivienda; geografía Panamá y remoto; rutas abiertas (Transformación Digital en banca, Innovación e IA).
+
+- No activar "Open to Work" (ni siquiera "solo reclutadores"): LinkedIn no garantiza ocultarlo a colegas de la empresa actual.
+- Desactivar "Compartir actualizaciones del perfil con tu red" antes de editar.
+- Sin lenguaje de disponibilidad en headline ni "Acerca de"; la CTA es "intercambiar ideas".
+- Contacto con headhunters por mensaje privado, nunca en público.
+- Headline: `Transformación Digital, Innovación e IA en Banca | Adopción de canales, automatización y gestión del cambio | +$10M ventas digitales · −30% costos | Panamá · Remoto LatAm`
+- Perfil en inglés con zona horaria (UTC−5) para búsquedas remotas.
+- Cero datos internos de Davivienda en contenido público; confirmar que las cifras de Scotiabank/Citi sean citables.
